@@ -308,7 +308,14 @@ def main() -> int:
         report["status"] = f"BLOCKED: download failed {e!r}"[:500]
         (out / f"{a.candidate}.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), "utf-8")
         return 0
-    server = Path(a.llama_dir) / ("llama-server.exe" if os.name == "nt" else "llama-server")
+    exe = "llama-server.exe" if os.name == "nt" else "llama-server"
+    found = sorted(Path(a.llama_dir).rglob(exe))
+    if not found:
+        report["status"] = f"BLOCKED: {exe} not found in {a.llama_dir}"
+        (out / f"{a.candidate}.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), "utf-8")
+        return 0
+    server = found[0]
+    report["server_path"] = str(server)
     threads = psutil.cpu_count(logical=False) or 4
     report["smoke"] = run_smoke(server, model, a.ctx, threads, out)
     ok = [c for c in report["smoke"]["cases"] if c.get("output")]

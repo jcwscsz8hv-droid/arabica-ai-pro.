@@ -1,12 +1,13 @@
 name: discovery
 
 # Evidence-gathering run: real CPU inference of both candidate models on Windows x64.
+# All logs are committed to the `ci-reports` branch (job logs are not readable from the dev sandbox).
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - "tools/ci/discovery.py"
+      - "tools/ci/**"
       - ".github/workflows/discovery.yml"
 
 permissions:
@@ -14,7 +15,7 @@ permissions:
 
 concurrency:
   group: discovery
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   llama:
@@ -22,29 +23,34 @@ jobs:
     outputs:
       tag: ${{ steps.rel.outputs.tag }}
     steps:
-      - name: Resolve latest llama.cpp Windows CPU build
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch llama.cpp Windows CPU build
         id: rel
         shell: pwsh
         env:
-          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+          PYTHONUTF8: "1"
         run: |
-          $rel = gh release view --repo ggml-org/llama.cpp --json tagName,assets | ConvertFrom-Json
-          $asset = $rel.assets | Where-Object { $_.name -match 'bin-win-cpu-x64\.zip$' } | Select-Object -First 1
-          if (-not $asset) { $rel.assets | ForEach-Object { $_.name }; throw "no win-cpu-x64 asset" }
-          "tag=$($rel.tagName)" >> $env:GITHUB_OUTPUT
-          gh release download $rel.tagName --repo ggml-org/llama.cpp --pattern $asset.name --dir dl
-          New-Item -ItemType Directory llama | Out-Null
-          Expand-Archive "dl/$($asset.name)" -DestinationPath llama
-          $h = (Get-FileHash "dl/$($asset.name)" -Algorithm SHA256).Hash.ToLower()
-          @{ tag = $rel.tagName; asset = $asset.name; sha256 = $h;
-             files = (Get-ChildItem llama -Recurse -File | ForEach-Object { $_.FullName.Substring((Resolve-Path llama).Path.Length + 1) }) } |
-            ConvertTo-Json -Depth 4 | Out-File -Encoding utf8 llama-info.json
-          Get-Content llama-info.json
+          New-Item -ItemType Directory logs -Force | Out-Null
+          python tools/ci/fetch_llama.py --dest llama --info llama-info.json 2>&1 | Tee-Object -FilePath logs/fetch_llama.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & (Get-ChildItem llama -Recurse -Filter llama-server.exe | Select-Object -First 1).FullName --version 2>&1 | Tee-Object -FilePath logs/llama-version.log
+          exit 0
       - uses: actions/upload-artifact@v4
         with:
           name: llama
           path: |
             llama
+            llama-info.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: report-llama
+          path: |
+            logs
             llama-info.json
 
   smoke:
@@ -68,11 +74,12 @@ jobs:
       - name: Host facts
         shell: pwsh
         run: |
-          New-Item -ItemType Directory out | Out-Null
-          Get-CimInstance Win32_Processor | Select-Object Name,NumberOfCores,NumberOfLogicalProcessors | Format-List | Out-File -Encoding utf8 out/host-${{ matrix.candidate }}.txt
-          Get-PSDrive -PSProvider FileSystem | Format-Table Name,Used,Free -AutoSize | Out-File -Append -Encoding utf8 out/host-${{ matrix.candidate }}.txt
-          (Get-CimInstance Win32_OperatingSystem).Caption + " " + (Get-CimInstance Win32_OperatingSystem).Version | Out-File -Append -Encoding utf8 out/host-${{ matrix.candidate }}.txt
-          Get-Content out/host-${{ matrix.candidate }}.txt
+          New-Item -ItemType Directory out -Force | Out-Null
+          $f = "out/host-${{ matrix.candidate }}.txt"
+          Get-CimInstance Win32_Processor | Select-Object Name,NumberOfCores,NumberOfLogicalProcessors | Format-List | Out-File -Encoding utf8 $f
+          Get-PSDrive -PSProvider FileSystem | Format-Table Name,Used,Free -AutoSize | Out-File -Append -Encoding utf8 $f
+          $os = Get-CimInstance Win32_OperatingSystem; "$($os.Caption) $($os.Version)" | Out-File -Append -Encoding utf8 $f
+          Get-Content $f
           $c = (Get-PSDrive C).Free; $d = 0; if (Get-PSDrive D -ErrorAction SilentlyContinue) { $d = (Get-PSDrive D).Free }
           if ($d -gt $c) { "WORK=D:\work" >> $env:GITHUB_ENV } else { "WORK=C:\work" >> $env:GITHUB_ENV }
       - name: Smoke translation
@@ -81,8 +88,8 @@ jobs:
           PYTHONUTF8: "1"
           HF_HUB_DISABLE_TELEMETRY: "1"
         run: |
-          python tools/ci/discovery.py --candidate ${{ matrix.candidate }} --llama-dir llamapkg/llama --work $env:WORK --out out
-          Get-Content out/${{ matrix.candidate }}.json -Encoding utf8
+          python tools/ci/discovery.py --candidate ${{ matrix.candidate }} --llama-dir llamapkg/llama --work $env:WORK --out out 2>&1 | Tee-Object -FilePath out/discovery-${{ matrix.candidate }}.log
+          exit 0
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -96,20 +103,25 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
+          pattern: report-*
           path: art
       - name: Commit report to ci-reports branch
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -e
-          dest="discovery/run-${{ github.run_id }}"
-          git clone --depth 1 --branch ci-reports "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}" rep \
-            || { git init rep; git -C rep checkout -b ci-reports; git -C rep remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}"; }
+          remote="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}"
+          dest="discovery/run-${{ github.run_id }}-${{ github.run_attempt }}"
+          if git ls-remote --exit-code --heads "$remote" ci-reports >/dev/null; then
+            git clone --depth 1 --branch ci-reports "$remote" rep
+          else
+            git init -q rep; git -C rep checkout -q -b ci-reports; git -C rep remote add origin "$remote"
+          fi
           mkdir -p "rep/$dest"
-          cp art/llama/llama-info.json "rep/$dest/" || true
-          for d in art/report-*; do cp -r "$d"/* "rep/$dest/" || true; done
+          cp -r art/. "rep/$dest/" || true
+          echo "llama=${{ needs.llama.result }} smoke=${{ needs.smoke.result }} sha=${{ github.sha }}" > "rep/$dest/RESULT.txt"
           cd rep
           git config user.name "arabica-ci"; git config user.email "ci@users.noreply.github.com"
           git add -A
-          git commit -m "discovery report ${{ github.run_id }} (llama.cpp ${{ needs.llama.outputs.tag }})" || exit 0
-          git push origin ci-reports
+          git commit -q -m "discovery ${{ github.run_id }}" || exit 0
+          git push -q origin ci-reports
