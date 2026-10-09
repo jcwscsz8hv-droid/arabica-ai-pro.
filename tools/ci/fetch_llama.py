@@ -34,6 +34,7 @@ def main() -> int:
     ap.add_argument("--info", required=True)
     ap.add_argument("--tag", default="")
     ap.add_argument("--pattern", default=PATTERN.pattern)
+    ap.add_argument("--sha256", default="", help="expected SHA-256 of the zip (fail closed)")
     a = ap.parse_args()
     pat = re.compile(a.pattern)
     if a.tag:
@@ -58,6 +59,9 @@ def main() -> int:
     print("CHOSEN:", rel.get("tag_name"), asset["name"])
     data = get(asset["browser_download_url"], accept="application/octet-stream")
     digest = hashlib.sha256(data).hexdigest()
+    if a.sha256 and digest != a.sha256:
+        print("ERROR: SHA-256 mismatch", digest)
+        return 3
     dest = Path(a.dest)
     dest.mkdir(parents=True, exist_ok=True)
     zpath = dest.parent / asset["name"]

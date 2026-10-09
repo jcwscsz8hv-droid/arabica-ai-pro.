@@ -14,7 +14,7 @@ RUSSIAN_RE = re.compile(r"[А-Яа-яЁё]")
 LATIN_RE = re.compile(r"[A-Za-z]")
 ARABIC_DIGITS = str.maketrans("٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹", "01234567890123456789")
 # Arabic decimal separator U+066B, thousands separator U+066C.
-NUMBERS_RE = re.compile(r"(?<![\w.])\d+(?:[.,٫]\d+)*(?![\w])")
+NUMBERS_RE = re.compile(r"(?<![0-9.,\u066B])[0-9]+(?:[.,\u066B][0-9]+)*(?![0-9])")  # clitics allowed: و9، الـ14
 TASHKEEL_RE = re.compile(r"[ؐ-ًؚ-ٰٟۖ-ۭ]")
 TATWEEL = "ـ"
 
@@ -84,7 +84,7 @@ def dialect_markers(text: str) -> dict[str, list[str]]:
 RU_NEG_RE = re.compile(r"(?<![А-Яа-яЁё])(не|нет|ни|нельзя|никогда|никто|ничто|ничего|нигде|никак|ниоткуда)(?![А-Яа-яЁё])",
                        re.IGNORECASE)
 AR_NEG_WORDS = {"لا", "لم", "لن", "ليس", "ليست", "ليسوا", "لست", "لسنا", "لستم", "ليسا", "ولا", "ولم", "ولن",
-                "وليس", "وليست", "فلا", "فلم", "فلن", "فليس", "أبدا", "قط"}
+                "وليس", "وليست", "فلا", "فلم", "فلن", "فليس", "أبدا", "قط", "ألا", "وألا", "لئلا", "كيلا"}
 
 
 # Fixed expressions that contain a negator but are not negations ("still", "especially", "not only").

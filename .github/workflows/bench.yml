@@ -1,0 +1,106 @@
+name: bench
+
+# Closed-set benchmark of both candidate models through the real application pipeline (CPU only).
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/bench.yml"
+      - "tools/ci/bench.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bench
+  cancel-in-progress: true
+
+env:
+  PYTHONUTF8: "1"
+  HF_HUB_DISABLE_TELEMETRY: "1"
+
+jobs:
+  run:
+    runs-on: windows-latest
+    timeout-minutes: 300
+    defaults:
+      run:
+        working-directory: C:\w
+    strategy:
+      fail-fast: false
+      matrix:
+        model: [qwen35-9b-q6k, qwen3-14b-q5km]
+        shard: [0, 1, 2, 3]
+    steps:
+      # Repository name ends with "." which Windows cannot use as a folder; clone into C:\w.
+      - name: Checkout (dot-safe)
+        shell: pwsh
+        working-directory: C:\
+        run: git clone --depth 1 "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" C:\w
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install "huggingface_hub>=0.25" psutil
+      - name: Fetch pinned llama.cpp
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          $pin = (Get-Content tools/ci/pins.json -Raw | ConvertFrom-Json).llama_cpp
+          python tools/ci/fetch_llama.py --tag $pin.tag --sha256 $pin.sha256 --dest llama --info llama-info.json
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Benchmark shard
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory out -Force | Out-Null
+          $c = (Get-PSDrive C).Free; $d = 0; if (Get-PSDrive D -ErrorAction SilentlyContinue) { $d = (Get-PSDrive D).Free }
+          $work = if ($d -gt $c) { "D:\work" } else { "C:\work2" }
+          python tools/ci/bench.py --model ${{ matrix.model }} --shard ${{ matrix.shard }} --shards 4 --llama-dir llama --work $work --out out 2>&1 | Tee-Object -FilePath out/bench-${{ matrix.model }}-${{ matrix.shard }}.log
+          exit 0
+      - name: Annotate tail
+        if: always()
+        shell: pwsh
+        run: |
+          Get-Content out/bench-${{ matrix.model }}-${{ matrix.shard }}.log -Tail 30 -ErrorAction SilentlyContinue | Out-File -Encoding utf8 out/tail.txt
+          python tools/ci/annotate.py bench-${{ matrix.model }}-${{ matrix.shard }} out/tail.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bench-${{ matrix.model }}-${{ matrix.shard }}
+          path: C:\w\out
+
+  report:
+    needs: run
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install "sacrebleu==2.4.3"
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: bench-*
+          path: art
+      - run: python tools/ci/bench_report.py --results art --out report > /dev/null
+      - name: Commit to ci-reports
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          remote="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}"
+          dest="bench/run-${{ github.run_id }}-${{ github.run_attempt }}"
+          git clone --depth 1 --branch ci-reports "$remote" rep
+          mkdir -p "rep/$dest"
+          cp -r report/. "rep/$dest/"
+          find art -name "results-*.jsonl" -exec cp {} "rep/$dest/" \;
+          find art -name "bench-*.json" -exec cp {} "rep/$dest/" \;
+          echo "sha=${{ github.sha }} run=${{ needs.run.result }}" > "rep/$dest/RESULT.txt"
+          cd rep
+          git config user.name "arabica-ci"; git config user.email "ci@users.noreply.github.com"
+          git add -A
+          git commit -q -m "bench ${{ github.run_id }}" || exit 0
+          git push -q origin ci-reports
+          echo "::notice::bench report committed to ci-reports/$dest"
