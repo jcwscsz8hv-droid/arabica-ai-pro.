@@ -268,6 +268,33 @@ def run_smoke(server: Path, model: Path, ctx: int, threads: int, logdir: Path) -
     return res
 
 
+def write_summary(report: dict, path: Path) -> None:
+    L = [f"candidate: {report.get('candidate')}", f"status: {report.get('status')}",
+         f"host: {json.dumps(report.get('host'))}"]
+    hf = report.get("hf", {})
+    L.append(f"base: {json.dumps(hf.get('base'), ensure_ascii=False)}")
+    for repo, info in hf.get("repos", {}).items():
+        if "error" in info:
+            L.append(f"repo {repo}: ERROR {info['error'][:160]}")
+        else:
+            names = [f"{f['name']} ({(f['size'] or 0) / 1e9:.2f} GB)" for f in info["gguf_files"]]
+            L.append(f"repo {repo}: license={info.get('license')} files={len(names)}: " + "; ".join(names[:30]))
+    L.append(f"chosen: {json.dumps(hf.get('chosen'))}")
+    L.append(f"download: {json.dumps(report.get('download'))}")
+    sm = report.get("smoke") or {}
+    for k in ("cold_start_s", "exit_code_early", "gen_tokens_per_s_median", "prompt_tokens_per_s_median",
+              "peak_rss_bytes", "peak_working_set_bytes", "peak_private_bytes", "unauthenticated_request_rejected"):
+        L.append(f"{k}: {sm.get(k)}")
+    for c in sm.get("cases", []):
+        L.append(f"[{c['direction']}] {c['source']}")
+        L.append(f"  => {c.get('output') or c.get('error')}")
+        if c.get("reasoning_content") or c.get("has_think_tag"):
+            L.append("  !! reasoning present")
+        t = c.get("timings") or {}
+        L.append(f"  wall={c.get('wall_s')}s gen_tps={t.get('predicted_per_second')} n={t.get('predicted_n')}")
+    path.write_text("\n".join(L) + "\n", encoding="utf-8")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--candidate", required=True, choices=sorted(CANDIDATES))
@@ -299,6 +326,7 @@ def main() -> int:
     if not chosen:
         report["status"] = "BLOCKED: no matching GGUF found"
         (out / f"{a.candidate}.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), "utf-8")
+        write_summary(report, out / f"summary-{a.candidate}.txt")
         return 0
     try:
         model, dl = download(chosen, work / "models")
@@ -307,12 +335,14 @@ def main() -> int:
     except Exception as e:  # noqa: BLE001
         report["status"] = f"BLOCKED: download failed {e!r}"[:500]
         (out / f"{a.candidate}.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), "utf-8")
+        write_summary(report, out / f"summary-{a.candidate}.txt")
         return 0
     exe = "llama-server.exe" if os.name == "nt" else "llama-server"
     found = sorted(Path(a.llama_dir).rglob(exe))
     if not found:
         report["status"] = f"BLOCKED: {exe} not found in {a.llama_dir}"
         (out / f"{a.candidate}.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), "utf-8")
+        write_summary(report, out / f"summary-{a.candidate}.txt")
         return 0
     server = found[0]
     report["server_path"] = str(server)
@@ -321,6 +351,7 @@ def main() -> int:
     ok = [c for c in report["smoke"]["cases"] if c.get("output")]
     report["status"] = "OK" if len(ok) == len(SMOKE) else f"PARTIAL {len(ok)}/{len(SMOKE)}"
     (out / f"{a.candidate}.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), "utf-8")
+    write_summary(report, out / f"summary-{a.candidate}.txt")
     print(json.dumps({k: report.get(k) for k in ("candidate", "status")}, ensure_ascii=False))
     return 0
 

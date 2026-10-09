@@ -47,6 +47,10 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           & (Get-ChildItem llama -Recurse -Filter llama-server.exe | Select-Object -First 1).FullName --version 2>&1 | Tee-Object -FilePath logs/llama-version.log
           exit 0
+      - name: Annotate fetch log
+        if: always()
+        shell: pwsh
+        run: python tools/ci/annotate.py fetch logs/fetch_llama.log logs/llama-version.log llama-info.json
       - uses: actions/upload-artifact@v4
         with:
           name: llama
@@ -106,6 +110,17 @@ jobs:
         run: |
           python tools/ci/discovery.py --candidate ${{ matrix.candidate }} --llama-dir llamapkg/llama --work $env:WORK --out out 2>&1 | Tee-Object -FilePath out/discovery-${{ matrix.candidate }}.log
           exit 0
+      - name: Annotate summary
+        if: always()
+        shell: pwsh
+        run: python tools/ci/annotate.py ${{ matrix.candidate }} out/summary-${{ matrix.candidate }}.txt out/host-${{ matrix.candidate }}.txt
+      - name: Annotate log tail
+        if: always()
+        shell: pwsh
+        run: |
+          Get-Content out/discovery-${{ matrix.candidate }}.log -Tail 60 -ErrorAction SilentlyContinue | Out-File -Encoding utf8 out/tail.txt
+          Get-ChildItem out -Filter "server-*.log" | ForEach-Object { Get-Content $_.FullName -Tail 40 } | Out-File -Append -Encoding utf8 out/tail.txt
+          python tools/ci/annotate.py log-${{ matrix.candidate }} out/tail.txt
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -140,4 +155,5 @@ jobs:
           git config user.name "arabica-ci"; git config user.email "ci@users.noreply.github.com"
           git add -A
           git commit -q -m "discovery ${{ github.run_id }}" || exit 0
-          git push -q origin ci-reports
+          git push -q origin ci-reports 2>&1 || { echo "::error::push to ci-reports failed"; exit 1; }
+          echo "::notice::reports committed to ci-reports/$dest"
