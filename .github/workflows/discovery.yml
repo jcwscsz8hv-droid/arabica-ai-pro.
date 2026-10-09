@@ -20,10 +20,18 @@ concurrency:
 jobs:
   llama:
     runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: C:\w
     outputs:
       tag: ${{ steps.rel.outputs.tag }}
     steps:
-      - uses: actions/checkout@v4
+      # The repository name ends with "." which Windows cannot use as a folder name,
+      # so the default workspace cannot be created. Clone into C:\w instead.
+      - name: Checkout (dot-safe)
+        shell: pwsh
+        working-directory: C:\
+        run: git clone --depth 1 "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" C:\w
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -43,26 +51,34 @@ jobs:
         with:
           name: llama
           path: |
-            llama
-            llama-info.json
+            C:\w\llama
+            C:\w\llama-info.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: report-llama
           path: |
-            logs
-            llama-info.json
+            C:\w\logs
+            C:\w\llama-info.json
 
   smoke:
     needs: llama
     runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: C:\w
     timeout-minutes: 150
     strategy:
       fail-fast: false
       matrix:
         candidate: [qwen35-9b-q6k, qwen3-14b-q5km]
     steps:
-      - uses: actions/checkout@v4
+      # The repository name ends with "." which Windows cannot use as a folder name,
+      # so the default workspace cannot be created. Clone into C:\w instead.
+      - name: Checkout (dot-safe)
+        shell: pwsh
+        working-directory: C:\
+        run: git clone --depth 1 "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" C:\w
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -70,7 +86,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: llama
-          path: llamapkg
+          path: C:\w\llamapkg
       - name: Host facts
         shell: pwsh
         run: |
@@ -94,7 +110,7 @@ jobs:
         if: always()
         with:
           name: report-${{ matrix.candidate }}
-          path: out
+          path: C:\w\out
 
   publish:
     needs: [llama, smoke]

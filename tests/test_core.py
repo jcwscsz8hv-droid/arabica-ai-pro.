@@ -39,7 +39,7 @@ class TestCore(unittest.TestCase):
 
     def test_quality_numbers(self):
         w = check_translation('Сейчас 2026 год', 'إنه عام ٢٠٢٥', 'ru-ar')
-        self.assertTrue(any('числа' in x for x in w))
+        self.assertTrue(any('числа' in str(x) for x in w))
 
     def test_quality_same_numbers(self):
         self.assertEqual(check_translation('Сейчас 2026 год', 'نحن في عام ٢٠٢٦', 'ru-ar'), [])
