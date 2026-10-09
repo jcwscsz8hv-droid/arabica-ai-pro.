@@ -35,17 +35,27 @@ def main() -> int:
     ap.add_argument("--tag", default="")
     ap.add_argument("--pattern", default=PATTERN.pattern)
     a = ap.parse_args()
-    url = f"{API}/tags/{a.tag}" if a.tag else f"{API}/latest"
-    rel = json.loads(get(url))
-    names = [x["name"] for x in rel.get("assets", [])]
-    print("release:", rel.get("tag_name"), "assets:", len(names))
-    for n in names:
-        print("  ", n)
     pat = re.compile(a.pattern)
-    asset = next((x for x in rel["assets"] if pat.search(x["name"])), None)
+    if a.tag:
+        releases = [json.loads(get(f"{API}/tags/{a.tag}"))]
+    else:
+        releases = json.loads(get(f"{API}?per_page=40"))
+    rel = asset = None
+    for r in releases:
+        names = [x["name"] for x in r.get("assets", [])]
+        win = [n for n in names if "win" in n]
+        print("release:", r.get("tag_name"), "prerelease:", r.get("prerelease"), "assets:", len(names),
+              "win:", ", ".join(win[:12]))
+        if r.get("draft"):
+            continue
+        cand = next((x for x in r.get("assets", []) if pat.search(x["name"])), None)
+        if cand and asset is None:
+            rel, asset = r, cand
     if not asset:
         print("ERROR: no asset matches", a.pattern)
         return 2
+    names = [x["name"] for x in rel.get("assets", [])]
+    print("CHOSEN:", rel.get("tag_name"), asset["name"])
     data = get(asset["browser_download_url"], accept="application/octet-stream")
     digest = hashlib.sha256(data).hexdigest()
     dest = Path(a.dest)
