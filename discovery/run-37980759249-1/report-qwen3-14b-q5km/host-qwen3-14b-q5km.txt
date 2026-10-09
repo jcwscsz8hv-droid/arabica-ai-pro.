@@ -1,0 +1,13 @@
+
+Name                      : AMD EPYC 7763 64-Core Processor                
+NumberOfCores             : 2
+NumberOfLogicalProcessors : 4
+
+
+Name         Used         Free
+----         ----         ----
+C    125923549184  34544209920
+D      3219386368 157839785984
+Temp 125923549184  34544209920
+
+Microsoft Windows Server 2025 Datacenter 10.0.26100

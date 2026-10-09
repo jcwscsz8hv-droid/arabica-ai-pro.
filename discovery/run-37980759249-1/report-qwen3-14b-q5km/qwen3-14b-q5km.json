@@ -1,0 +1,382 @@
+{
+  "candidate": "qwen3-14b-q5km",
+  "host": {
+    "platform": "Windows-2025Server-10.0.26100-SP0",
+    "machine": "AMD64",
+    "cpu_logical": 4,
+    "cpu_physical": 2,
+    "ram_total_bytes": 17174360064,
+    "disk_free_work_bytes": 157839785984
+  },
+  "started_utc": "2026-10-09T19:31:49Z",
+  "hf": {
+    "repos": {
+      "Qwen/Qwen3-14B-GGUF": {
+        "sha": "530227a7d994db8eca5ab5ced2fb692b614357fd",
+        "license": "apache-2.0",
+        "gguf_files": [
+          {
+            "name": "Qwen3-14B-Q4_K_M.gguf",
+            "size": 9001752960,
+            "sha256": "500a8806e85ee9c83f3ae08420295592451379b4f8cf2d0f41c15dffeb6b81f0"
+          },
+          {
+            "name": "Qwen3-14B-Q5_0.gguf",
+            "size": 10263894400,
+            "sha256": "18c9a27d7862057158032b1fb836485febc64058e07afc89063519c93e61ca80"
+          },
+          {
+            "name": "Qwen3-14B-Q5_K_M.gguf",
+            "size": 10514569568,
+            "sha256": "e7c9aba1129ca2936be9eca01419d9f86af40e08caa01230d5574b34d08e3e31"
+          },
+          {
+            "name": "Qwen3-14B-Q6_K.gguf",
+            "size": 12121937248,
+            "sha256": "ec1f1d1421d7636a23e17645cac6fda39ee4b5f1f11e42eb09238089705ef699"
+          },
+          {
+            "name": "Qwen3-14B-Q8_0.gguf",
+            "size": 15698533728,
+            "sha256": "a0dfe649137410b7d82f06a209240508e218f32f5b6fd81b69d6932160cfcd9d"
+          }
+        ],
+        "tags": [
+          "base_model:Qwen/Qwen3-14B",
+          "base_model:quantized:Qwen/Qwen3-14B",
+          "license:apache-2.0"
+        ]
+      }
+    },
+    "chosen": {
+      "repo": "Qwen/Qwen3-14B-GGUF",
+      "revision": "530227a7d994db8eca5ab5ced2fb692b614357fd",
+      "name": "Qwen3-14B-Q5_K_M.gguf",
+      "size": 10514569568,
+      "sha256": "e7c9aba1129ca2936be9eca01419d9f86af40e08caa01230d5574b34d08e3e31"
+    },
+    "base": {
+      "repo": "Qwen/Qwen3-14B",
+      "sha": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+      "license": "apache-2.0",
+      "tags": [
+        "arxiv:2309.00071",
+        "arxiv:2505.09388",
+        "base_model:Qwen/Qwen3-14B-Base",
+        "base_model:finetune:Qwen/Qwen3-14B-Base",
+        "license:apache-2.0"
+      ],
+      "pipeline_tag": "text-generation"
+    }
+  },
+  "download": {
+    "download_s": 27.9,
+    "hash_s": 9.7,
+    "sha256": "e7c9aba1129ca2936be9eca01419d9f86af40e08caa01230d5574b34d08e3e31",
+    "sha256_matches_lfs": true,
+    "size": 10514569568
+  },
+  "disk_free_after_download_bytes": 147325214720,
+  "server_path": "llamapkg\\llama\\llama-server.exe",
+  "smoke": {
+    "args": [
+      "-m",
+      "D:\\work\\models\\Qwen3-14B-Q5_K_M.gguf",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "63480",
+      "-c",
+      "4096",
+      "-t",
+      "2",
+      "-np",
+      "1",
+      "--jinja",
+      "--api-key",
+      "a9eb72dc16bd1c33f3ac94aacfaa5e59",
+      "--no-webui"
+    ],
+    "cold_start_s": 6.3,
+    "exit_code_early": null,
+    "cases": [
+      {
+        "direction": "ru-ar",
+        "source": "Книга",
+        "output": "كتاب",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 14.51,
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 84,
+          "prompt_ms": 13606.481,
+          "prompt_per_token_ms": 161.98191666666668,
+          "prompt_per_second": 6.173528629481789,
+          "predicted_n": 3,
+          "predicted_ms": 896.091,
+          "predicted_per_token_ms": 448.0455,
+          "predicted_per_second": 2.231916178156013
+        },
+        "usage": {
+          "completion_tokens": 3,
+          "prompt_tokens": 84,
+          "total_tokens": 87,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "direction": "ru-ar",
+        "source": "Министр иностранных дел заявил, что переговоры не будут возобновлены до 15 марта 2027 года.",
+        "output": "أعلن وزير الخارجية أن المفاوضات لن تُستأنف قبل 15 مارس 2027.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 19.73,
+        "timings": {
+          "cache_n": 72,
+          "prompt_n": 45,
+          "prompt_ms": 7311.998,
+          "prompt_per_token_ms": 162.48884444444442,
+          "prompt_per_second": 6.154268641758382,
+          "predicted_n": 29,
+          "predicted_ms": 12418.327,
+          "predicted_per_token_ms": 443.51167857142855,
+          "predicted_per_second": 2.254732058513196
+        },
+        "usage": {
+          "completion_tokens": 29,
+          "prompt_tokens": 117,
+          "total_tokens": 146,
+          "prompt_tokens_details": {
+            "cached_tokens": 72
+          }
+        }
+      },
+      {
+        "direction": "ru-ar",
+        "source": "Правительство выделило 2,5 миллиарда рублей на строительство 120 школ.",
+        "output": "خصصت الحكومة 2,5 مليار روبل لبناء 120 مدرسة.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 16.11,
+        "timings": {
+          "cache_n": 72,
+          "prompt_n": 35,
+          "prompt_ms": 7236.842,
+          "prompt_per_token_ms": 206.76691428571428,
+          "prompt_per_second": 4.8363637067107454,
+          "predicted_n": 21,
+          "predicted_ms": 8847.551,
+          "predicted_per_token_ms": 442.37755,
+          "predicted_per_second": 2.2605125418321976
+        },
+        "usage": {
+          "completion_tokens": 21,
+          "prompt_tokens": 107,
+          "total_tokens": 128,
+          "prompt_tokens_details": {
+            "cached_tokens": 72
+          }
+        }
+      },
+      {
+        "direction": "ru-ar",
+        "source": "Мы не можем согласиться с этим предложением, однако готовы продолжить диалог.",
+        "output": "نحن لا نستطيع أن نتفق مع هذا الاقتراح، ولكننا مستعدين لمواصلة الحوار.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 15.78,
+        "timings": {
+          "cache_n": 72,
+          "prompt_n": 31,
+          "prompt_ms": 5162.053,
+          "prompt_per_token_ms": 166.51783870967742,
+          "prompt_per_second": 6.005362595076029,
+          "predicted_n": 25,
+          "predicted_ms": 10607.44,
+          "predicted_per_token_ms": 441.9766666666667,
+          "predicted_per_second": 2.262562880393384
+        },
+        "usage": {
+          "completion_tokens": 25,
+          "prompt_tokens": 103,
+          "total_tokens": 128,
+          "prompt_tokens_details": {
+            "cached_tokens": 72
+          }
+        }
+      },
+      {
+        "direction": "ru-ar",
+        "source": "Осенью в старом парке было тихо, и только ветер шуршал опавшими листьями.",
+        "output": "في الخريف كان الحديقَة القديمة هادئة، وإذا لم تكن هناك سوى الرياح التي تُحدث صوتَ خشخشة الأوراق المتساقطة.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 26.62,
+        "timings": {
+          "cache_n": 72,
+          "prompt_n": 40,
+          "prompt_ms": 7319.336,
+          "prompt_per_token_ms": 182.98340000000002,
+          "prompt_per_second": 5.464976604435156,
+          "predicted_n": 45,
+          "predicted_ms": 19298.641,
+          "predicted_per_token_ms": 438.6054772727273,
+          "predicted_per_second": 2.2799532879025004
+        },
+        "usage": {
+          "completion_tokens": 45,
+          "prompt_tokens": 112,
+          "total_tokens": 157,
+          "prompt_tokens_details": {
+            "cached_tokens": 72
+          }
+        }
+      },
+      {
+        "direction": "ar-ru",
+        "source": "كتاب",
+        "output": "Книга",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 12.79,
+        "timings": {
+          "cache_n": 9,
+          "prompt_n": 70,
+          "prompt_ms": 11427.076,
+          "prompt_per_token_ms": 163.24394285714286,
+          "prompt_per_second": 6.125801561134275,
+          "predicted_n": 4,
+          "predicted_ms": 1323.867,
+          "predicted_per_token_ms": 441.289,
+          "predicted_per_second": 2.266088662985028
+        },
+        "usage": {
+          "completion_tokens": 4,
+          "prompt_tokens": 79,
+          "total_tokens": 83,
+          "prompt_tokens_details": {
+            "cached_tokens": 9
+          }
+        }
+      },
+      {
+        "direction": "ar-ru",
+        "source": "أكد الأمين العام للأمم المتحدة أن الحل العسكري ليس خيارا مقبولا.",
+        "output": "Генеральный секретарь Организации Объединенных Наций заявил, что военное решение не является приемлемым вариантом.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 19.9,
+        "timings": {
+          "cache_n": 68,
+          "prompt_n": 28,
+          "prompt_ms": 5211.744,
+          "prompt_per_token_ms": 186.13371428571426,
+          "prompt_per_second": 5.3724818410113775,
+          "predicted_n": 34,
+          "predicted_ms": 14680.891,
+          "predicted_per_token_ms": 444.87548484848486,
+          "predicted_per_second": 2.2478199722346552
+        },
+        "usage": {
+          "completion_tokens": 34,
+          "prompt_tokens": 96,
+          "total_tokens": 130,
+          "prompt_tokens_details": {
+            "cached_tokens": 68
+          }
+        }
+      },
+      {
+        "direction": "ar-ru",
+        "source": "وقعت الدولتان اتفاقية تعاون في مجال الطاقة المتجددة يوم 3 أبريل 2026.",
+        "output": "Две страны подписали соглашение о сотрудничестве в области возобновляемой энергии 3 апреля 2026 года.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 21.44,
+        "timings": {
+          "cache_n": 68,
+          "prompt_n": 38,
+          "prompt_ms": 7096.58,
+          "prompt_per_token_ms": 186.7521052631579,
+          "prompt_per_second": 5.3546919783895905,
+          "predicted_n": 34,
+          "predicted_ms": 14325.955,
+          "predicted_per_token_ms": 434.1198484848485,
+          "predicted_per_second": 2.303511354042366
+        },
+        "usage": {
+          "completion_tokens": 34,
+          "prompt_tokens": 106,
+          "total_tokens": 140,
+          "prompt_tokens_details": {
+            "cached_tokens": 68
+          }
+        }
+      },
+      {
+        "direction": "ar-ru",
+        "source": "لم يحضر الوفد الاجتماع بسبب الظروف الجوية.",
+        "output": "Делегация не прибыла на встречу из-за погодных условий.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 14.34,
+        "timings": {
+          "cache_n": 68,
+          "prompt_n": 22,
+          "prompt_ms": 5100.275,
+          "prompt_per_token_ms": 231.8306818181818,
+          "prompt_per_second": 4.313492899892653,
+          "predicted_n": 22,
+          "predicted_ms": 9233.281,
+          "predicted_per_token_ms": 439.6800476190477,
+          "predicted_per_second": 2.274381121943543
+        },
+        "usage": {
+          "completion_tokens": 22,
+          "prompt_tokens": 90,
+          "total_tokens": 112,
+          "prompt_tokens_details": {
+            "cached_tokens": 68
+          }
+        }
+      },
+      {
+        "direction": "ar-ru",
+        "source": "تشير الدراسة إلى أن نسبة البطالة بين الشباب ارتفعت إلى 18 في المئة خلال العام الماضي.",
+        "output": "Исследование показывает, что уровень безработицы среди молодежи вырос до 18 процентов в прошлом году.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 20.02,
+        "timings": {
+          "cache_n": 68,
+          "prompt_n": 35,
+          "prompt_ms": 7059.108,
+          "prompt_per_token_ms": 201.68880000000001,
+          "prompt_per_second": 4.9581335205524555,
+          "predicted_n": 31,
+          "predicted_ms": 12953.529,
+          "predicted_per_token_ms": 431.78430000000003,
+          "predicted_per_second": 2.315971192097536
+        },
+        "usage": {
+          "completion_tokens": 31,
+          "prompt_tokens": 103,
+          "total_tokens": 134,
+          "prompt_tokens_details": {
+            "cached_tokens": 68
+          }
+        }
+      }
+    ],
+    "unauthenticated_request_rejected": true,
+    "peak_rss_bytes": 10800078848,
+    "peak_working_set_bytes": 10800078848,
+    "peak_private_bytes": 1069993984,
+    "gen_tokens_per_s_median": 2.266088662985028,
+    "prompt_tokens_per_s_median": 5.464976604435156
+  },
+  "status": "OK"
+}

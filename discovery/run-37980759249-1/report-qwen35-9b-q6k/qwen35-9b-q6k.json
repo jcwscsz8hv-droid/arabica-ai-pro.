@@ -1,0 +1,701 @@
+{
+  "candidate": "qwen35-9b-q6k",
+  "host": {
+    "platform": "Windows-2025Server-10.0.26100-SP0",
+    "machine": "AMD64",
+    "cpu_logical": 4,
+    "cpu_physical": 2,
+    "ram_total_bytes": 17174360064,
+    "disk_free_work_bytes": 157839781888
+  },
+  "started_utc": "2026-10-09T19:31:53Z",
+  "hf": {
+    "repos": {
+      "Qwen/Qwen3.5-9B-GGUF": {
+        "error": "RepositoryNotFoundError('401 Client Error. (Request ID: Root=1-6ac9412a-7882117136ebd62315c1d6a8;281e13ec-60b3-41c0-9e51-d93f7bfb0a50)\\n\\nRepository Not Found for url: https://huggingface.co/api/models/Qwen/Qwen3.5-9B-GGUF?blobs=true.\\nPlease make sure you specified the correct `repo_id` and `repo_t"
+      },
+      "AtomicChat/Qwen3.5-9B-GGUF": {
+        "sha": "e9a969f97281651d1950bca29361cea72d6879a5",
+        "license": "apache-2.0",
+        "gguf_files": [
+          {
+            "name": "qwen35-9b-Q4_K_M.gguf",
+            "size": 5629109312,
+            "sha256": "257d67756177fa088cbebac83a14c9ab7067f5dccc0b5bc79c2ba24610b28266"
+          },
+          {
+            "name": "qwen35-9b-Q5_K_M.gguf",
+            "size": 6467970112,
+            "sha256": "5a29b637cc6c7009b047999831427f18181f71c5a6fd0dbfd0bfd1e005617609"
+          },
+          {
+            "name": "qwen35-9b-Q6_K.gguf",
+            "size": 7359259712,
+            "sha256": "ecaa3ff73b3f818b64a3b34b21834286cf7b1fdbbcbcad8892ace4383bb5c1e9"
+          },
+          {
+            "name": "qwen35-9b-Q8_0.gguf",
+            "size": 9527501888,
+            "sha256": "2625ce02659ae82d9ea02eb2f1f67addadffcf1ad1aa13241f88ed6f5df336e6"
+          },
+          {
+            "name": "qwen35-9b-UD-Q4_K_XL.gguf",
+            "size": 6384002112,
+            "sha256": "1f0ccd6b6bb0c73997a9850564bf57f2cd1f0021b0391404ea5553f41d8560ea"
+          }
+        ],
+        "tags": [
+          "base_model:Qwen/Qwen3.5-9B",
+          "base_model:quantized:Qwen/Qwen3.5-9B",
+          "license:apache-2.0"
+        ]
+      },
+      "unsloth/Qwen3.5-9B-GGUF": {
+        "sha": "3885219b6810b007914f3a7950a8d1b469d598a5",
+        "license": "apache-2.0",
+        "gguf_files": [
+          {
+            "name": "Qwen3.5-9B-BF16.gguf",
+            "size": 17920697312,
+            "sha256": "daebe40eeea7057c1cdf35ac56d13f507d8bf12171bbb7a6b6b0d3f05439159a"
+          },
+          {
+            "name": "Qwen3.5-9B-IQ4_NL.gguf",
+            "size": 5371028704,
+            "sha256": "12fd6b43e298ae4c8d374e64e8c2406c252d109ead47dffb46e75be3566ed0e5"
+          },
+          {
+            "name": "Qwen3.5-9B-IQ4_XS.gguf",
+            "size": 5168653536,
+            "sha256": "7e918aeca06c52bcb528ea6b04b4ec957e75ee8c0a73138854c0dfcf371ea429"
+          },
+          {
+            "name": "Qwen3.5-9B-Q3_K_M.gguf",
+            "size": 4673643744,
+            "sha256": "8fed90306e4f019e2bf35f3766470b7bc59ea1a9dae00f5ceb20b43cb5514393"
+          },
+          {
+            "name": "Qwen3.5-9B-Q3_K_S.gguf",
+            "size": 4316865760,
+            "sha256": "162050d39ebae6b8a87435f282bcb7a0e3fab7b2444db730966b3fef1ed0179e"
+          },
+          {
+            "name": "Qwen3.5-9B-Q4_0.gguf",
+            "size": 5379417312,
+            "sha256": "17670346b4260ddcb0173965145155885024f3c9a4a24389a3370751edbcde24"
+          },
+          {
+            "name": "Qwen3.5-9B-Q4_1.gguf",
+            "size": 5837251808,
+            "sha256": "5fb62c51d47454ac1dd2fab6b40cedb94755232b553c2f245a7e13e3991b252a"
+          },
+          {
+            "name": "Qwen3.5-9B-Q4_K_M.gguf",
+            "size": 5680522464,
+            "sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8"
+          },
+          {
+            "name": "Qwen3.5-9B-Q4_K_S.gguf",
+            "size": 5394097376,
+            "sha256": "023713a5240bf58a84d2890a30deb2e0485abb5b9b9c33ba67596e9248b35f80"
+          },
+          {
+            "name": "Qwen3.5-9B-Q5_K_M.gguf",
+            "size": 6577841376,
+            "sha256": "dc2a39aef291f91a9116ad214058da0d86eb648743a124bd8c333787c4b9c91c"
+          },
+          {
+            "name": "Qwen3.5-9B-Q5_K_S.gguf",
+            "size": 6361146592,
+            "sha256": "be88613a50ba792bd5a2bc07b74bcd97c9ed9dbac028d27a44c6888e712323c3"
+          },
+          {
+            "name": "Qwen3.5-9B-Q6_K.gguf",
+            "size": 7458301152,
+            "sha256": "91898433cf5ce0a8f45516a4cc3e9343b6e01d052d01f684309098c66a326c59"
+          },
+          {
+            "name": "Qwen3.5-9B-Q8_0.gguf",
+            "size": 9527502048,
+            "sha256": "809626574d0cb43d4becfa56169980da2bb448f2299270f7be443cb89d0a6ae4"
+          },
+          {
+            "name": "Qwen3.5-9B-UD-IQ2_M.gguf",
+            "size": 3649365216,
+            "sha256": "a31b6b4c603ddd66b5496ee065c9dd13b2b6de77dce9e5d59609aef8d39868e7"
+          },
+          {
+            "name": "Qwen3.5-9B-UD-IQ2_XXS.gguf",
+            "size": 3190613216,
+            "sha256": "570ce2bbc92545cffbcb01df43cba59d86093dadc34c25da9f554d256bc70b91"
+          },
+          {
+            "name": "Qwen3.5-9B-UD-IQ3_XXS.gguf",
+            "size": 4016235744,
+            "sha256": "40d0f32cd3030b04f0784139a589fb63e876cfbf8667d56311b79783c74fd149"
+          },
+          {
+            "name": "Qwen3.5-9B-UD-Q2_K_XL.gguf",
+            "size": 4121781472,
+            "sha256": "fcea605227c939525a4145349a082f603d7e5df639be3d88b7aa1e883517552c"
+          },
+          {
+            "name": "Qwen3.5-9B-UD-Q3_K_XL.gguf",
+            "size": 5053834464,
+            "sha256": "aae0879e1be99ce93f0d56217f8185a399e25ad68a8ebbc095f362706283062f"
+          },
+          {
+            "name": "Qwen3.5-9B-UD-Q4_K_XL.gguf",
+            "size": 5966095584,
+            "sha256": "6f5d30666c2d8ae16a306e616d95341dcf3cc46810df84d7e6f5a7d1e4c1b293"
+          },
+          {
+            "name": "Qwen3.5-9B-UD-Q5_K_XL.gguf",
+            "size": 6743680224,
+            "sha256": "96cf42ddb97f9572410a72b9ed6f2299b1e887ee08da4c2a6c01e897cfa9f673"
+          },
+          {
+            "name": "Qwen3.5-9B-UD-Q6_K_XL.gguf",
+            "size": 8756929760,
+            "sha256": "33b0050fb9c19abcf815647a78464dad959a06dadaecb0b96af798669f9074d4"
+          },
+          {
+            "name": "Qwen3.5-9B-UD-Q8_K_XL.gguf",
+            "size": 12974040288,
+            "sha256": "2c4e08e0e72c68d8c1835a26f5be4075894df9ea5be9cc20a246517afd6a0cb6"
+          },
+          {
+            "name": "mmproj-BF16.gguf",
+            "size": 921705024,
+            "sha256": "853698ce7aa6c7ba732478bad280240969ddf7b0fcbf93900046f63903a83383"
+          },
+          {
+            "name": "mmproj-F16.gguf",
+            "size": 918166080,
+            "sha256": "f70dc3509053962b0d0d3ee8a7eacebf5d60aa560cad78254ae8698516ae029f"
+          },
+          {
+            "name": "mmproj-F32.gguf",
+            "size": 1824062016,
+            "sha256": "a1cd5c1625b44dd0facaec998020e9b36cb78c2225eaee701e73bf2e5b051ce2"
+          }
+        ],
+        "tags": [
+          "base_model:Qwen/Qwen3.5-9B",
+          "base_model:quantized:Qwen/Qwen3.5-9B",
+          "license:apache-2.0"
+        ]
+      },
+      "bartowski/Qwen_Qwen3.5-9B-GGUF": {
+        "sha": "182be2fd6c7bc44887d88a91cb03ff009cc9f549",
+        "license": "apache-2.0",
+        "gguf_files": [
+          {
+            "name": "Qwen_Qwen3.5-9B-IQ2_M.gguf",
+            "size": 4027985952,
+            "sha256": "da40cabfce82b6e1b23262634ff45c45bbc078ba788a54c4ffd80287b38dff8c"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-IQ2_S.gguf",
+            "size": 3480626272,
+            "sha256": "08a0276ab3175a9b3bda93e6eed2cbfbc25eec4d54e62f9d88bfa916c35dc983"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-IQ3_M.gguf",
+            "size": 4981092384,
+            "sha256": "cbeadcf49deaf24c756516c4b98e88b88ec8719108553038623d52907f84522d"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-IQ3_XS.gguf",
+            "size": 4819087392,
+            "sha256": "120ef957b56c90668993d4ea2220ca8608a4b0e48874f3e509ee0c912a330eb9"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-IQ3_XXS.gguf",
+            "size": 4534579232,
+            "sha256": "478d619ab6f27ca84c8e8650667329ba54bb5cecda5d732a19dc91c6fd6b6948"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-IQ4_NL.gguf",
+            "size": 5737459744,
+            "sha256": "7ccef125bab36831ac2c6cff91d3367431dac82661339ae8484ed69d895c472d"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-IQ4_XS.gguf",
+            "size": 5501202464,
+            "sha256": "7d977cc96c2e08616016d967f232083e354691a8a16f345b26f7d782ee5c9601"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q2_K.gguf",
+            "size": 4322832416,
+            "sha256": "8c5a0b383c07703e256c92c169e5fe474d1379ec8bbb39944a4ca0f12c483160"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q2_K_L.gguf",
+            "size": 5316112416,
+            "sha256": "8c4bed1eb901ae25908712ac81eb734cd528d1a8036567041be01cf3dddb275e"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q3_K_L.gguf",
+            "size": 5369589792,
+            "sha256": "b322281bc890c1edf55e6df5dcc09b45a96b0341a312b6c835635ff9b0e95277"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q3_K_M.gguf",
+            "size": 5178748960,
+            "sha256": "24fccd8416fcdca792f939de4a2240eb57795b0f7a9ba92e62398eab3ec5c11e"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q3_K_S.gguf",
+            "size": 4927877152,
+            "sha256": "951daaf25645c6debf0d20a45b0ccea56361543ee323d3c91647ef065b59946d"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q3_K_XL.gguf",
+            "size": 6259568672,
+            "sha256": "8e36d3a4e8adfdbb6496dc74325ca380619d4a711fe479bbe383348b5a5c29e8"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q4_0.gguf",
+            "size": 5741391904,
+            "sha256": "a44b0e06af0c97cece312f6dca52b3639d038d1a74a2e194b22e159f9ccdbb21"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q4_1.gguf",
+            "size": 6203420704,
+            "sha256": "49c9428139e1173e88eccb42de09cfc124069a731cd63bf3a607038f612dea35"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q4_K_L.gguf",
+            "size": 6924234784,
+            "sha256": "f2113638e0aa3d5081ce8e0b33aca38573805cd470254a60fd2c28c3847cd32d"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q4_K_M.gguf",
+            "size": 6169341984,
+            "sha256": "d784ce9eda1a5a7b51e8f705a9e6310844bf4f173654d115823c775fdea56d43"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q4_K_S.gguf",
+            "size": 5856735264,
+            "sha256": "25bacefaea1654a359bab316793f217a646da8610ee7973a26548fb2d624c7a9"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q5_K_L.gguf",
+            "size": 7739240480,
+            "sha256": "3b25609c1f780789519f812ba6a7d4b000912830edfaac98ee9b91339a399017"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q5_K_M.gguf",
+            "size": 7111487520,
+            "sha256": "a686d88ec1e6881f9bf161526826cd6d6874b7f0e80e0f79acf6144a132c5d7e"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q5_K_S.gguf",
+            "size": 6784987168,
+            "sha256": "20597afa8e22d8e984c8adc7495a4de7fc97e9a7c41533827def2887de774a9a"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q6_K.gguf",
+            "size": 7958818848,
+            "sha256": "073a9275e65d9c8cd2819cf5f77b99fbaa6e87ba591da6bbaa86ec073a64bfef"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q6_K_L.gguf",
+            "size": 8451485728,
+            "sha256": "23a91e941634ce922058558cd6c055ed8440ba710daee57613b12a2da7356111"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-Q8_0.gguf",
+            "size": 9804541984,
+            "sha256": "b58fe056b5435070240de259f3f981aa38fee96825bbd78c088d5fd90e46f2b5"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-bf16.gguf",
+            "size": 18407321344,
+            "sha256": "cbffa57f1473e22e7a09a4205da743a4f625131ffb9603eabd741df3ad78898a"
+          },
+          {
+            "name": "Qwen_Qwen3.5-9B-imatrix.gguf",
+            "size": 5150208,
+            "sha256": "2bcdd8d949b096c988d7c05cfb6d4e7af16c34e9f327349a43cf1a3b56066091"
+          },
+          {
+            "name": "mmproj-Qwen_Qwen3.5-9B-bf16.gguf",
+            "size": 921704896,
+            "sha256": "d89c4bc142d02ed64aeed5c0a358bdead9109f21f4ada03a6b2df17a1aa94d9e"
+          },
+          {
+            "name": "mmproj-Qwen_Qwen3.5-9B-f16.gguf",
+            "size": 918165952,
+            "sha256": "97f420245a85ce129bb764e86a5e21e27d782fe6d6056c6839b9c5fdb8f38289"
+          }
+        ],
+        "tags": [
+          "base_model:Qwen/Qwen3.5-9B",
+          "base_model:quantized:Qwen/Qwen3.5-9B",
+          "license:apache-2.0"
+        ]
+      },
+      "lmstudio-community/Qwen3.5-9B-GGUF": {
+        "sha": "1379f25c6b505a3fc737bd7818cb09389cf807c1",
+        "license": "apache-2.0",
+        "gguf_files": [
+          {
+            "name": "Qwen3.5-9B-Q4_K_M.gguf",
+            "size": 5627044256,
+            "sha256": "cd76ec205963b3b33350093e6904d9de16c4e666fd104e1f632d25c7f15f2a13"
+          },
+          {
+            "name": "Qwen3.5-9B-Q6_K.gguf",
+            "size": 7359259040,
+            "sha256": "b2ccc477f0a2449de299bef560b63e498cae94a2f3a3bae13df01168d77773e6"
+          },
+          {
+            "name": "Qwen3.5-9B-Q8_0.gguf",
+            "size": 9527501216,
+            "sha256": "096a84703a334662086e4b46b6a4dd896bad10a46f67cd84a53cfe1420b24717"
+          },
+          {
+            "name": "mmproj-Qwen3.5-9B-BF16.gguf",
+            "size": 921704480,
+            "sha256": "330d17547bfdbcd0e7a0cb3f4b06b4ceeac0aaa1e449122d9d66ef957aeb74b3"
+          }
+        ],
+        "tags": [
+          "base_model:Qwen/Qwen3.5-9B",
+          "base_model:quantized:Qwen/Qwen3.5-9B",
+          "license:apache-2.0"
+        ]
+      }
+    },
+    "chosen": {
+      "repo": "AtomicChat/Qwen3.5-9B-GGUF",
+      "revision": "e9a969f97281651d1950bca29361cea72d6879a5",
+      "name": "qwen35-9b-Q6_K.gguf",
+      "size": 7359259712,
+      "sha256": "ecaa3ff73b3f818b64a3b34b21834286cf7b1fdbbcbcad8892ace4383bb5c1e9"
+    },
+    "base": {
+      "repo": "Qwen/Qwen3.5-9B",
+      "sha": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+      "license": "apache-2.0",
+      "tags": [
+        "base_model:Qwen/Qwen3.5-9B-Base",
+        "base_model:finetune:Qwen/Qwen3.5-9B-Base",
+        "license:apache-2.0"
+      ],
+      "pipeline_tag": "image-text-to-text"
+    }
+  },
+  "download": {
+    "download_s": 201.4,
+    "hash_s": 6.7,
+    "sha256": "ecaa3ff73b3f818b64a3b34b21834286cf7b1fdbbcbcad8892ace4383bb5c1e9",
+    "sha256_matches_lfs": true,
+    "size": 7359259712
+  },
+  "disk_free_after_download_bytes": 150480519168,
+  "server_path": "llamapkg\\llama\\llama-server.exe",
+  "smoke": {
+    "args": [
+      "-m",
+      "D:\\work\\models\\qwen35-9b-Q6_K.gguf",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "63491",
+      "-c",
+      "4096",
+      "-t",
+      "2",
+      "-np",
+      "1",
+      "--jinja",
+      "--api-key",
+      "da6dfbbaaed474b67af1ac37e4f4f3d9",
+      "--no-webui"
+    ],
+    "cold_start_s": 4.2,
+    "exit_code_early": null,
+    "cases": [
+      {
+        "direction": "ru-ar",
+        "source": "Книга",
+        "output": "الكتاب",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 9.93,
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 84,
+          "prompt_ms": 9355.336,
+          "prompt_per_token_ms": 111.37304761904761,
+          "prompt_per_second": 8.978833042447647,
+          "predicted_n": 3,
+          "predicted_ms": 569.183,
+          "predicted_per_token_ms": 284.5915,
+          "predicted_per_second": 3.5138083885147657
+        },
+        "usage": {
+          "completion_tokens": 3,
+          "prompt_tokens": 84,
+          "total_tokens": 87,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "direction": "ru-ar",
+        "source": "Министр иностранных дел заявил, что переговоры не будут возобновлены до 15 марта 2027 года.",
+        "output": "أعلن وزير الخارجية أن المفاوضات لن تُعاد استئنافها حتى 15 مارس 2027.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 11.72,
+        "timings": {
+          "cache_n": 69,
+          "prompt_n": 39,
+          "prompt_ms": 5128.886,
+          "prompt_per_token_ms": 131.50989743589744,
+          "prompt_per_second": 7.603990418192176,
+          "predicted_n": 25,
+          "predicted_ms": 6588.573,
+          "predicted_per_token_ms": 274.52387500000003,
+          "predicted_per_second": 3.6426704234740965
+        },
+        "usage": {
+          "completion_tokens": 25,
+          "prompt_tokens": 108,
+          "total_tokens": 133,
+          "prompt_tokens_details": {
+            "cached_tokens": 69
+          }
+        }
+      },
+      {
+        "direction": "ru-ar",
+        "source": "Правительство выделило 2,5 миллиарда рублей на строительство 120 школ.",
+        "output": "أصدرت الحكومة 2.5 مليار روبل لبناء 120 مدرسة.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 9.2,
+        "timings": {
+          "cache_n": 69,
+          "prompt_n": 32,
+          "prompt_ms": 4027.217,
+          "prompt_per_token_ms": 125.85053125,
+          "prompt_per_second": 7.9459338794010845,
+          "predicted_n": 20,
+          "predicted_ms": 5170.36,
+          "predicted_per_token_ms": 272.1242105263158,
+          "predicted_per_second": 3.6747924709304574
+        },
+        "usage": {
+          "completion_tokens": 20,
+          "prompt_tokens": 101,
+          "total_tokens": 121,
+          "prompt_tokens_details": {
+            "cached_tokens": 69
+          }
+        }
+      },
+      {
+        "direction": "ru-ar",
+        "source": "Мы не можем согласиться с этим предложением, однако готовы продолжить диалог.",
+        "output": "لا يمكننا الموافقة على هذا الاقتراح، غير أننا مستعدون لاستئناف الحوار.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 8.84,
+        "timings": {
+          "cache_n": 69,
+          "prompt_n": 29,
+          "prompt_ms": 3988.09,
+          "prompt_per_token_ms": 137.5203448275862,
+          "prompt_per_second": 7.2716513418704185,
+          "predicted_n": 19,
+          "predicted_ms": 4850.667,
+          "predicted_per_token_ms": 269.48150000000004,
+          "predicted_per_second": 3.7108298714382992
+        },
+        "usage": {
+          "completion_tokens": 19,
+          "prompt_tokens": 98,
+          "total_tokens": 117,
+          "prompt_tokens_details": {
+            "cached_tokens": 69
+          }
+        }
+      },
+      {
+        "direction": "ru-ar",
+        "source": "Осенью в старом парке было тихо, и только ветер шуршал опавшими листьями.",
+        "output": "في الخريف، كان الهدوء يسود في الحديقة القديمة، وكان الريح وحدها تهمس بالأوراق المتساقطة.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 12.24,
+        "timings": {
+          "cache_n": 69,
+          "prompt_n": 36,
+          "prompt_ms": 4059.783,
+          "prompt_per_token_ms": 112.77175,
+          "prompt_per_second": 8.867469024822263,
+          "predicted_n": 31,
+          "predicted_ms": 8176.783,
+          "predicted_per_token_ms": 272.55943333333335,
+          "predicted_per_second": 3.6689245636089396
+        },
+        "usage": {
+          "completion_tokens": 31,
+          "prompt_tokens": 105,
+          "total_tokens": 136,
+          "prompt_tokens_details": {
+            "cached_tokens": 69
+          }
+        }
+      },
+      {
+        "direction": "ar-ru",
+        "source": "كتاب",
+        "output": "Книга",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 10.17,
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 78,
+          "prompt_ms": 9365.098,
+          "prompt_per_token_ms": 120.06535897435897,
+          "prompt_per_second": 8.328796986427692,
+          "predicted_n": 4,
+          "predicted_ms": 779.918,
+          "predicted_per_token_ms": 259.97266666666667,
+          "predicted_per_second": 3.846558227916268
+        },
+        "usage": {
+          "completion_tokens": 4,
+          "prompt_tokens": 78,
+          "total_tokens": 82,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "direction": "ar-ru",
+        "source": "أكد الأمين العام للأمم المتحدة أن الحل العسكري ليس خيارا مقبولا.",
+        "output": "Генеральный секретарь Организации Объединенных Наций подтвердил, что военное решение не является приемлемым вариантом.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 11.81,
+        "timings": {
+          "cache_n": 65,
+          "prompt_n": 27,
+          "prompt_ms": 3925.122,
+          "prompt_per_token_ms": 145.37488888888888,
+          "prompt_per_second": 6.878767080360815,
+          "predicted_n": 30,
+          "predicted_ms": 7884.714,
+          "predicted_per_token_ms": 271.8866896551724,
+          "predicted_per_second": 3.6780027785408578
+        },
+        "usage": {
+          "completion_tokens": 30,
+          "prompt_tokens": 92,
+          "total_tokens": 122,
+          "prompt_tokens_details": {
+            "cached_tokens": 65
+          }
+        }
+      },
+      {
+        "direction": "ar-ru",
+        "source": "وقعت الدولتان اتفاقية تعاون في مجال الطاقة المتجددة يوم 3 أبريل 2026.",
+        "output": "Две страны подписали соглашение о сотрудничестве в области возобновляемой энергетики 3 апреля 2026 года.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 11.42,
+        "timings": {
+          "cache_n": 65,
+          "prompt_n": 34,
+          "prompt_ms": 3963.52,
+          "prompt_per_token_ms": 116.57411764705883,
+          "prompt_per_second": 8.578233489423543,
+          "predicted_n": 28,
+          "predicted_ms": 7453.411,
+          "predicted_per_token_ms": 276.05225925925924,
+          "predicted_per_second": 3.622502502545479
+        },
+        "usage": {
+          "completion_tokens": 28,
+          "prompt_tokens": 99,
+          "total_tokens": 127,
+          "prompt_tokens_details": {
+            "cached_tokens": 65
+          }
+        }
+      },
+      {
+        "direction": "ar-ru",
+        "source": "لم يحضر الوفد الاجتماع بسبب الظروف الجوية.",
+        "output": "Делегация не смогла принять участие в заседании из-за погодных условий.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 8.72,
+        "timings": {
+          "cache_n": 65,
+          "prompt_n": 23,
+          "prompt_ms": 3863.534,
+          "prompt_per_token_ms": 167.97973913043478,
+          "prompt_per_second": 5.953098898573172,
+          "predicted_n": 19,
+          "predicted_ms": 4855.133,
+          "predicted_per_token_ms": 269.7296111111111,
+          "predicted_per_second": 3.707416460064019
+        },
+        "usage": {
+          "completion_tokens": 19,
+          "prompt_tokens": 88,
+          "total_tokens": 107,
+          "prompt_tokens_details": {
+            "cached_tokens": 65
+          }
+        }
+      },
+      {
+        "direction": "ar-ru",
+        "source": "تشير الدراسة إلى أن نسبة البطالة بين الشباب ارتفعت إلى 18 في المئة خلال العام الماضي.",
+        "output": "Согласно исследованию, уровень безработицы среди молодежи вырос до 18 процентов в прошлом году.",
+        "reasoning_content": null,
+        "has_think_tag": false,
+        "wall_s": 10.66,
+        "timings": {
+          "cache_n": 65,
+          "prompt_n": 34,
+          "prompt_ms": 3908.08,
+          "prompt_per_token_ms": 114.9435294117647,
+          "prompt_per_second": 8.699924259482918,
+          "predicted_n": 26,
+          "predicted_ms": 6747.565,
+          "predicted_per_token_ms": 269.9026,
+          "predicted_per_second": 3.7050402626725347
+        },
+        "usage": {
+          "completion_tokens": 26,
+          "prompt_tokens": 99,
+          "total_tokens": 125,
+          "prompt_tokens_details": {
+            "cached_tokens": 65
+          }
+        }
+      }
+    ],
+    "unauthenticated_request_rejected": true,
+    "peak_rss_bytes": 7122747392,
+    "peak_working_set_bytes": 7122751488,
+    "peak_private_bytes": 1147428864,
+    "gen_tokens_per_s_median": 3.6780027785408578,
+    "prompt_tokens_per_s_median": 8.328796986427692
+  },
+  "status": "OK"
+}

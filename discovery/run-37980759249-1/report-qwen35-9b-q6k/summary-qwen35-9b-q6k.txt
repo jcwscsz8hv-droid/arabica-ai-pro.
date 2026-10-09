@@ -1,0 +1,49 @@
+candidate: qwen35-9b-q6k
+status: OK
+host: {"platform": "Windows-2025Server-10.0.26100-SP0", "machine": "AMD64", "cpu_logical": 4, "cpu_physical": 2, "ram_total_bytes": 17174360064, "disk_free_work_bytes": 157839781888}
+base: {"repo": "Qwen/Qwen3.5-9B", "sha": "c202236235762e1c871ad0ccb60c8ee5ba337b9a", "license": "apache-2.0", "tags": ["base_model:Qwen/Qwen3.5-9B-Base", "base_model:finetune:Qwen/Qwen3.5-9B-Base", "license:apache-2.0"], "pipeline_tag": "image-text-to-text"}
+repo Qwen/Qwen3.5-9B-GGUF: ERROR RepositoryNotFoundError('401 Client Error. (Request ID: Root=1-6ac9412a-7882117136ebd62315c1d6a8;281e13ec-60b3-41c0-9e51-d93f7bfb0a50)\n\nRepository Not Found f
+repo AtomicChat/Qwen3.5-9B-GGUF: license=apache-2.0 files=5: qwen35-9b-Q4_K_M.gguf (5.63 GB); qwen35-9b-Q5_K_M.gguf (6.47 GB); qwen35-9b-Q6_K.gguf (7.36 GB); qwen35-9b-Q8_0.gguf (9.53 GB); qwen35-9b-UD-Q4_K_XL.gguf (6.38 GB)
+repo unsloth/Qwen3.5-9B-GGUF: license=apache-2.0 files=25: Qwen3.5-9B-BF16.gguf (17.92 GB); Qwen3.5-9B-IQ4_NL.gguf (5.37 GB); Qwen3.5-9B-IQ4_XS.gguf (5.17 GB); Qwen3.5-9B-Q3_K_M.gguf (4.67 GB); Qwen3.5-9B-Q3_K_S.gguf (4.32 GB); Qwen3.5-9B-Q4_0.gguf (5.38 GB); Qwen3.5-9B-Q4_1.gguf (5.84 GB); Qwen3.5-9B-Q4_K_M.gguf (5.68 GB); Qwen3.5-9B-Q4_K_S.gguf (5.39 GB); Qwen3.5-9B-Q5_K_M.gguf (6.58 GB); Qwen3.5-9B-Q5_K_S.gguf (6.36 GB); Qwen3.5-9B-Q6_K.gguf (7.46 GB); Qwen3.5-9B-Q8_0.gguf (9.53 GB); Qwen3.5-9B-UD-IQ2_M.gguf (3.65 GB); Qwen3.5-9B-UD-IQ2_XXS.gguf (3.19 GB); Qwen3.5-9B-UD-IQ3_XXS.gguf (4.02 GB); Qwen3.5-9B-UD-Q2_K_XL.gguf (4.12 GB); Qwen3.5-9B-UD-Q3_K_XL.gguf (5.05 GB); Qwen3.5-9B-UD-Q4_K_XL.gguf (5.97 GB); Qwen3.5-9B-UD-Q5_K_XL.gguf (6.74 GB); Qwen3.5-9B-UD-Q6_K_XL.gguf (8.76 GB); Qwen3.5-9B-UD-Q8_K_XL.gguf (12.97 GB); mmproj-BF16.gguf (0.92 GB); mmproj-F16.gguf (0.92 GB); mmproj-F32.gguf (1.82 GB)
+repo bartowski/Qwen_Qwen3.5-9B-GGUF: license=apache-2.0 files=28: Qwen_Qwen3.5-9B-IQ2_M.gguf (4.03 GB); Qwen_Qwen3.5-9B-IQ2_S.gguf (3.48 GB); Qwen_Qwen3.5-9B-IQ3_M.gguf (4.98 GB); Qwen_Qwen3.5-9B-IQ3_XS.gguf (4.82 GB); Qwen_Qwen3.5-9B-IQ3_XXS.gguf (4.53 GB); Qwen_Qwen3.5-9B-IQ4_NL.gguf (5.74 GB); Qwen_Qwen3.5-9B-IQ4_XS.gguf (5.50 GB); Qwen_Qwen3.5-9B-Q2_K.gguf (4.32 GB); Qwen_Qwen3.5-9B-Q2_K_L.gguf (5.32 GB); Qwen_Qwen3.5-9B-Q3_K_L.gguf (5.37 GB); Qwen_Qwen3.5-9B-Q3_K_M.gguf (5.18 GB); Qwen_Qwen3.5-9B-Q3_K_S.gguf (4.93 GB); Qwen_Qwen3.5-9B-Q3_K_XL.gguf (6.26 GB); Qwen_Qwen3.5-9B-Q4_0.gguf (5.74 GB); Qwen_Qwen3.5-9B-Q4_1.gguf (6.20 GB); Qwen_Qwen3.5-9B-Q4_K_L.gguf (6.92 GB); Qwen_Qwen3.5-9B-Q4_K_M.gguf (6.17 GB); Qwen_Qwen3.5-9B-Q4_K_S.gguf (5.86 GB); Qwen_Qwen3.5-9B-Q5_K_L.gguf (7.74 GB); Qwen_Qwen3.5-9B-Q5_K_M.gguf (7.11 GB); Qwen_Qwen3.5-9B-Q5_K_S.gguf (6.78 GB); Qwen_Qwen3.5-9B-Q6_K.gguf (7.96 GB); Qwen_Qwen3.5-9B-Q6_K_L.gguf (8.45 GB); Qwen_Qwen3.5-9B-Q8_0.gguf (9.80 GB); Qwen_Qwen3.5-9B-bf16.gguf (18.41 GB); Qwen_Qwen3.5-9B-imatrix.gguf (0.01 GB); mmproj-Qwen_Qwen3.5-9B-bf16.gguf (0.92 GB); mmproj-Qwen_Qwen3.5-9B-f16.gguf (0.92 GB)
+repo lmstudio-community/Qwen3.5-9B-GGUF: license=apache-2.0 files=4: Qwen3.5-9B-Q4_K_M.gguf (5.63 GB); Qwen3.5-9B-Q6_K.gguf (7.36 GB); Qwen3.5-9B-Q8_0.gguf (9.53 GB); mmproj-Qwen3.5-9B-BF16.gguf (0.92 GB)
+chosen: {"repo": "AtomicChat/Qwen3.5-9B-GGUF", "revision": "e9a969f97281651d1950bca29361cea72d6879a5", "name": "qwen35-9b-Q6_K.gguf", "size": 7359259712, "sha256": "ecaa3ff73b3f818b64a3b34b21834286cf7b1fdbbcbcad8892ace4383bb5c1e9"}
+download: {"download_s": 201.4, "hash_s": 6.7, "sha256": "ecaa3ff73b3f818b64a3b34b21834286cf7b1fdbbcbcad8892ace4383bb5c1e9", "sha256_matches_lfs": true, "size": 7359259712}
+cold_start_s: 4.2
+exit_code_early: None
+gen_tokens_per_s_median: 3.6780027785408578
+prompt_tokens_per_s_median: 8.328796986427692
+peak_rss_bytes: 7122747392
+peak_working_set_bytes: 7122751488
+peak_private_bytes: 1147428864
+unauthenticated_request_rejected: True
+[ru-ar] Книга
+  => الكتاب
+  wall=9.93s gen_tps=3.5138083885147657 n=3
+[ru-ar] Министр иностранных дел заявил, что переговоры не будут возобновлены до 15 марта 2027 года.
+  => أعلن وزير الخارجية أن المفاوضات لن تُعاد استئنافها حتى 15 مارس 2027.
+  wall=11.72s gen_tps=3.6426704234740965 n=25
+[ru-ar] Правительство выделило 2,5 миллиарда рублей на строительство 120 школ.
+  => أصدرت الحكومة 2.5 مليار روبل لبناء 120 مدرسة.
+  wall=9.2s gen_tps=3.6747924709304574 n=20
+[ru-ar] Мы не можем согласиться с этим предложением, однако готовы продолжить диалог.
+  => لا يمكننا الموافقة على هذا الاقتراح، غير أننا مستعدون لاستئناف الحوار.
+  wall=8.84s gen_tps=3.7108298714382992 n=19
+[ru-ar] Осенью в старом парке было тихо, и только ветер шуршал опавшими листьями.
+  => في الخريف، كان الهدوء يسود في الحديقة القديمة، وكان الريح وحدها تهمس بالأوراق المتساقطة.
+  wall=12.24s gen_tps=3.6689245636089396 n=31
+[ar-ru] كتاب
+  => Книга
+  wall=10.17s gen_tps=3.846558227916268 n=4
+[ar-ru] أكد الأمين العام للأمم المتحدة أن الحل العسكري ليس خيارا مقبولا.
+  => Генеральный секретарь Организации Объединенных Наций подтвердил, что военное решение не является приемлемым вариантом.
+  wall=11.81s gen_tps=3.6780027785408578 n=30
+[ar-ru] وقعت الدولتان اتفاقية تعاون في مجال الطاقة المتجددة يوم 3 أبريل 2026.
+  => Две страны подписали соглашение о сотрудничестве в области возобновляемой энергетики 3 апреля 2026 года.
+  wall=11.42s gen_tps=3.622502502545479 n=28
+[ar-ru] لم يحضر الوفد الاجتماع بسبب الظروف الجوية.
+  => Делегация не смогла принять участие в заседании из-за погодных условий.
+  wall=8.72s gen_tps=3.707416460064019 n=19
+[ar-ru] تشير الدراسة إلى أن نسبة البطالة بين الشباب ارتفعت إلى 18 في المئة خلال العام الماضي.
+  => Согласно исследованию, уровень безработицы среди молодежи вырос до 18 процентов в прошлом году.
+  wall=10.66s gen_tps=3.7050402626725347 n=26
