@@ -1,0 +1,13 @@
+
+Name                      : AMD EPYC 9V45 96-Core Processor                
+NumberOfCores             : 2
+NumberOfLogicalProcessors : 4
+
+
+Name         Used         Free
+----         ----         ----
+C    129230118912  31237640192
+D       133386240 236071985152
+Temp 129230118912  31237640192
+
+Microsoft Windows Server 2025 Datacenter 10.0.26100
