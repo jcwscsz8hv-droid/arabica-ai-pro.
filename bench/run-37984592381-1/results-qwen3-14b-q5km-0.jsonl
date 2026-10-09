@@ -1,0 +1,100 @@
+{"id": "AR-GEN-001", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Доброе утро, хорошо ты выспался?", "issues": [], "seconds": 48.08}
+{"id": "AR-GEN-005", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Где автобусная станция?", "issues": [], "seconds": 11.21}
+{"id": "AR-GEN-009", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Мой друг живёт в старом районе.", "issues": [], "seconds": 12.05}
+{"id": "AR-GEN-013", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Этот книга очень полезна.", "issues": [], "seconds": 11.27}
+{"id": "AR-GEN-017", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Большое спасибо за подарок.", "issues": [], "seconds": 12.92}
+{"id": "AR-GEN-021", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Если ты закончишь работу рано, приходи к нам на ужин.", "issues": [], "seconds": 19.97}
+{"id": "AR-GEN-025", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "В столице за последние месяцы выросли цены на аренду.", "issues": [], "seconds": 16.02}
+{"id": "AR-GEN-029", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Дети проводят летние каникулы у своих дедушек и бабушек в деревне.", "issues": [], "seconds": 24.4}
+{"id": "AR-GEN-033", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Я отправлю тебе файл сразу, как только приду в офис.", "issues": [], "seconds": 14.46}
+{"id": "AR-GEN-037", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "В городе был открыт новый детский больничный.", "issues": [], "seconds": 12.15}
+{"id": "AR-GEN-041", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Когда мы прибыли в деревню, темнота уже настала, и жители встретили нас фонарями и проводили в гостевой дом.", "issues": [], "seconds": 37.84}
+{"id": "AR-GEN-045", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Чем позже вы бронируете билет, тем выше его цена.", "issues": [], "seconds": 17.28}
+{"id": "AR-GEN-049", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Если бы твоя сообщение пришла вовремя, я бы не пропустил совещание.", "issues": [{"code": "negation", "kind": "heuristic", "severity": "critical"}], "seconds": 24.06}
+{"id": "AR-AMB-001", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "глаз / око / взгляд", "issues": [], "seconds": 13.16}
+{"id": "AR-AMB-005", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Мы выпили из источника чистой воды у подножия горы.", "issues": [], "seconds": 18.7}
+{"id": "AR-AMB-009", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Поймать двух ворон одним камнем.", "issues": [], "seconds": 12.69}
+{"id": "AR-AMB-013", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Флан лёгкий в тени.", "issues": [], "seconds": 11.11}
+{"id": "AR-AMB-017", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Путь ещё длинный перед переговорщиками.", "issues": [], "seconds": 13.61}
+{"id": "AR-NND-001", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Никто не связался со мной.", "issues": [], "seconds": 10.64}
+{"id": "AR-NND-005", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "У меня сегодня нет времени.", "issues": [], "seconds": 7.45}
+{"id": "AR-NND-009", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Рейс отправляется в 23:15 и прибывает в 04:40.", "issues": [], "seconds": 24.45}
+{"id": "AR-NND-013", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Не удалось спасти корабль, однако все 23 члена экипажа выжили.", "issues": [], "seconds": 25.04}
+{"id": "AR-NND-017", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "Бюджет включает расходы в размере 1,25 триллиона дирхамов и ожидаемый дефицит в размере 2,3% от ВВП.", "issues": [], "seconds": 43.61}
+{"id": "AR-LIT-001", "model": "qwen3-14b-q5km", "mode": "literary", "prompt_version": "1.0.0", "output": "Солнце скрылось за горами.", "issues": [], "seconds": 18.94}
+{"id": "AR-LIT-005", "model": "qwen3-14b-q5km", "mode": "literary", "prompt_version": "1.0.0", "output": "Ребёнок улыбнулся во сне.", "issues": [], "seconds": 13.63}
+{"id": "AR-LIT-009", "model": "qwen3-14b-q5km", "mode": "literary", "prompt_version": "1.0.0", "output": "Лодка скользила по поверхности воды, как лист дерева.", "issues": [], "seconds": 17.43}
+{"id": "AR-LIT-013", "model": "qwen3-14b-q5km", "mode": "literary", "prompt_version": "1.0.0", "output": "Старуха сидела на пороге дома, ожидая письма, которое не придет, и знала об этом, но ждала каждый день.", "issues": [], "seconds": 36.02}
+{"id": "AR-LIT-017", "model": "qwen3-14b-q5km", "mode": "literary", "prompt_version": "1.0.0", "output": "Слова падали с его пера, как первые капли дождя: медленно, неуверенно, затем обильно.", "issues": [], "seconds": 31.25}
+{"id": "AR-POL-003", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Парламентские выборы пройдут в ноябре.", "issues": [], "seconds": 21.13}
+{"id": "AR-POL-007", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Парламент одобрил соглашение.", "issues": [], "seconds": 13.08}
+{"id": "AR-POL-011", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Премьер-министр обсудил в ходе заседания проект закона об инвестициях.", "issues": [], "seconds": 21.77}
+{"id": "AR-POL-015", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Доля явки на голосование составила 48 процентов.", "issues": [], "seconds": 15.58}
+{"id": "AR-POL-019", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Оппозиция потребовала проведения ранних выборов.", "issues": [], "seconds": 14.65}
+{"id": "AR-POL-023", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Спикер правительства пояснил, что повышение цен на топливо не затронет общественный транспорт, и государство возьмет на себя разницу.", "issues": [], "seconds": 39.92}
+{"id": "AR-POL-027", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Отчет рекомендовал создать независимое антикоррупционное агентство, обладающее широкими полномочиями для расследования и преследования.", "issues": [], "seconds": 43.9}
+{"id": "AR-DIP-001", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Министр иностранных дел принял российского посла.", "issues": [], "seconds": 18.2}
+{"id": "AR-DIP-005", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Министерство вызвало поверенного.", "issues": [], "seconds": 12.53}
+{"id": "AR-DIP-009", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Международный совет безопасности призвал к немедленному прекращению огня.", "issues": [], "seconds": 20.62}
+{"id": "AR-DIP-013", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Президент принял в_FUNCTIONS_ пять новых посольств.", "issues": [], "seconds": 15.66}
+{"id": "AR-DIP-017", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Катарская медиация успешно достигла соглашения о обмене удерживаемыми лицами между двумя сторонами.", "issues": [], "seconds": 29.16}
+{"id": "AR-MIL-001", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Морские силы провели учения в Красном море.", "issues": [], "seconds": 17.89}
+{"id": "AR-MIL-005", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Вернулись солдаты в казармы.", "issues": [], "seconds": 14.9}
+{"id": "AR-MIL-009", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Силы отступили на свои прежние позиции в соответствии с соглашением.", "issues": [], "seconds": 21.02}
+{"id": "AR-MIL-013", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Покойные силы мира наблюдают за зоной разведения.", "issues": [], "seconds": 17.05}
+{"id": "AR-MIL-017", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Дальность нового ракеты составляет 300 километров, и его можно запускать с подвижных пусковых установок.", "issues": [], "seconds": 34.98}
+{"id": "AR-SCI-001", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Воздух в основном состоит из азота и кислорода.", "issues": [], "seconds": 17.39}
+{"id": "AR-SCI-005", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Современные компьютеры зависят от полупроводников.", "issues": [], "seconds": 14.96}
+{"id": "AR-SCI-009", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Расплавление льда на полюсах приводит к повышению уровня моря.", "issues": [], "seconds": 24.39}
+{"id": "AR-SCI-013", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Марсоход был запущен в июле.", "issues": [], "seconds": 13.89}
+{"id": "AR-SCI-017", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "Доступные на данный момент данные недостаточны для подтверждения эффективности лечения в долгосрочной перспективе.", "issues": [{"code": "negation", "kind": "heuristic", "severity": "critical"}], "seconds": 29.4}
+{"id": "RA-GEN-001", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "الصباح الخير! كيف حالك؟", "issues": [], "seconds": 51.85}
+{"id": "RA-GEN-005", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "أين تقع أقرب صيدلية؟", "issues": [], "seconds": 13.16}
+{"id": "RA-GEN-009", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "تعمل طبيبة في مستشفى المدينة.", "issues": [], "seconds": 12.82}
+{"id": "RA-GEN-013", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "كانت الماء في النهر بارداً.", "issues": [], "seconds": 14.02}
+{"id": "RA-GEN-017", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "شكرًا لمساعدتك.", "issues": [], "seconds": 9.06}
+{"id": "RA-GEN-021", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "إذا كان هناك مطر غدًا، فسنت postpone الرحلة إلى الأسبوع القادم.", "issues": [], "seconds": 22.06}
+{"id": "RA-GEN-025", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "ارتفعت أسعار المنتجات بشكل ملحوظ خلال العام الماضي.", "issues": [], "seconds": 18.2}
+{"id": "RA-GEN-029", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "كل صيف تمضي العائلة إجازتها في القرية عند الجدة.", "issues": [], "seconds": 19.34}
+{"id": "RA-GEN-033", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "سأتصل بك بمجرد أن أحصل على نتائج التحاليل.", "issues": [], "seconds": 19.06}
+{"id": "RA-GEN-037", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "في هذا المنطقة بُنيت مدرسة جديدة ونursery.", "issues": [], "seconds": 17.78}
+{"id": "RA-GEN-041", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "عندما وصلنا إلى المحطة، تبين أن آخر قطار قد غادر بالفعل، وعليه اضطرينا للنوم في فندق صغير بالقرب من هناك.", "issues": [], "seconds": 42.08}
+{"id": "RA-GEN-045", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "كلما أرسلت الوثائق مبكرًا، زادت فرصك في الحصول على مكان في السكن الجامعي.", "issues": [], "seconds": 28.35}
+{"id": "RA-GEN-049", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "إذا كنت أعرف هذا مسبقًا، لكانني حذرتك بالتأكيد.", "issues": [], "seconds": 20.09}
+{"id": "RA-AMB-001", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "مفتاح", "issues": [], "seconds": 11.21}
+{"id": "RA-AMB-005", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "وجدَه المفتاحَ في قاع الوديعة: كانت تنساب من تحت الصخر مياهٌ نظيفةٌ باردة.", "issues": [], "seconds": 38.47}
+{"id": "RA-AMB-009", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "نَطَقَ الصَّيْدُ الرَّمْيَ وَأَخْرَجَ السَّيْفَ.", "issues": [], "seconds": 35.45}
+{"id": "RA-AMB-013", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "لا تؤجل إلى الغد ما يمكنك فعله اليوم.", "issues": [], "seconds": 15.29}
+{"id": "RA-AMB-017", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "استمرت العملية العسكرية ثلاثة أيام.", "issues": [], "seconds": 10.89}
+{"id": "RA-NND-001", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "لم يحضر الاجتماع.", "issues": [], "seconds": 8.58}
+{"id": "RA-NND-005", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "لا يسمح بالتدخين في المبنى.", "issues": [], "seconds": 14.21}
+{"id": "RA-NND-009", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "انطلق الطائرة في الساعة 06:45 و هبطت في الساعة 11:20 بالتوقيت المحلي.", "issues": [], "seconds": 30.69}
+{"id": "RA-NND-013", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "لا يستبعد أن تؤجل المفاوضات التي كان من المفترض أن تبدأ في 3 مارس على الأقل لمدة أسبوعين.", "issues": [], "seconds": 35.29}
+{"id": "RA-NND-017", "model": "qwen3-14b-q5km", "mode": "accurate", "prompt_version": "1.0.0", "output": "وصلت делегация الأمم المتحدة برئاسة أنطونيو غوتيريش إلى بغداد في 7 يوليو.", "issues": [], "seconds": 31.31}
+{"id": "RA-LIT-001", "model": "qwen3-14b-q5km", "mode": "literary", "prompt_version": "1.0.0", "output": "كان هناك ضباب يرتفع فوق النهر.", "issues": [], "seconds": 19.97}
+{"id": "RA-LIT-005", "model": "qwen3-14b-q5km", "mode": "literary", "prompt_version": "1.0.0", "output": "نظر الشيخ إلى البحر لفترة طويلة.", "issues": [], "seconds": 11.89}
+{"id": "RA-LIT-009", "model": "qwen3-14b-q5km", "mode": "literary", "prompt_version": "1.0.0", "output": "كانت الطريق تلتف بين التلال وتختفي في الضباب الأزرق.", "issues": [], "seconds": 21.68}
+{"id": "RA-LIT-013", "model": "qwen3-14b-q5km", "mode": "literary", "prompt_version": "1.0.0", "output": "كنا نسير صامتين، وإذا بقرص الثلج تحت أقدامنا يذكّرنا بأن العالم لم ينام بعد.", "issues": [], "seconds": 33.47}
+{"id": "RA-LIT-017", "model": "qwen3-14b-q5km", "mode": "literary", "prompt_version": "1.0.0", "output": "emed el-3a7s el-3ala an 3inda ma yu3a7id, yastawqa al-ma7d el-3ala 3adna3ihi, kama ma7ram yastawqa fi zir3a al-ma7d.", "issues": [{"code": "numbers", "kind": "exact", "severity": "critical"}, {"code": "negation", "kind": "heuristic", "severity": "critical"}], "seconds": 66.58}
+{"id": "RA-POL-003", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "ستُجرى الانتخابات في العام القادم.", "issues": [], "seconds": 18.27}
+{"id": "RA-POL-007", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "صوت النواب لصالح التعديلات الدستورية.", "issues": [], "seconds": 15.52}
+{"id": "RA-POL-011", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "قدم الحكومة مشروع ميزانية الدولة للعام القادم إلى البرلمان.", "issues": [], "seconds": 15.53}
+{"id": "RA-POL-015", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "كانت نسبة حضور الناخبين حوالي ستين في المائة.", "issues": [], "seconds": 19.61}
+{"id": "RA-POL-019", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "وصلت الأحزاب المعارضة إلى اتفاق لتقديم قائمة موحدة.", "issues": [], "seconds": 20.48}
+{"id": "RA-POL-023", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "في خطابه، أكد رئيس الوزراء أن الحكومة تهدف إلى تقليل عجز الميزانية دون رفع الضرائب على قطاع الأعمال الصغير.", "issues": [{"code": "negation", "kind": "heuristic", "severity": "critical"}], "seconds": 36.21}
+{"id": "RA-POL-027", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "أوصت اللجنة الحكومة بضرورة إعادة النظر في نظام توزيع الإعانات، بحيث تصل المساعدة أولاً إلى العائلات الفقيرة.", "issues": [], "seconds": 34.49}
+{"id": "RA-DIP-001", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "قدم السفير أوراق اعتماده.", "issues": [], "seconds": 13.58}
+{"id": "RA-DIP-005", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "وصلت الوفد إلى العاصمة في زي رسمية.", "issues": [], "seconds": 15.53}
+{"id": "RA-DIP-009", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "دعا الأمين العام للأمم المتحدة جميع أطراف النزاع إلى الهدوء.", "issues": [], "seconds": 23.18}
+{"id": "RA-DIP-013", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "أكد الوزير ولاء بلاده لمبدأ عدم التدخل في الشؤون الداخلية.", "issues": [], "seconds": 20.04}
+{"id": "RA-DIP-017", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "عبّر الوسطاء عن أملهم بأن نظام التهدئة سيُحترم من جميع الأطراف وسيسمح بتوصيل المساعدات الإنسانية.", "issues": [], "seconds": 33.32}
+{"id": "RA-MIL-001", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "أجرت القوات المسلحة تدريبات في الجنوب من البلاد.", "issues": [], "seconds": 14.26}
+{"id": "RA-MIL-005", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "لقد تلقى الأسطول فрегاتًا جديدًا.", "issues": [], "seconds": 14.9}
+{"id": "RA-MIL-009", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "استعاد المهندسون العسكريون الجسر الذي دُمر أثناء العمليات القتالية.", "issues": [], "seconds": 20.49}
+{"id": "RA-MIL-013", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "أكمل الطيارون تدريبهم على التزود بالوقود في الجو.", "issues": [], "seconds": 19.06}
+{"id": "RA-MIL-017", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "النظام الصاروخي للدفاع الجوي قادر على متابعة عدة أهداف في الوقت نفسه وضربها على مسافات تصل إلى مائة كيلومتر.", "issues": [], "seconds": 37.32}
+{"id": "RA-SCI-001", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "تغلي الماء عند مائة درجة مئوية.", "issues": [], "seconds": 15.55}
+{"id": "RA-SCI-005", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "يتطور الذكاء الاصطناعي بسرعة.", "issues": [], "seconds": 13.81}
+{"id": "RA-SCI-009", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "يرفع ارتفاع درجة حرارة المحيط خطرًا على الشعاب المرجانية.", "issues": [], "seconds": 22.66}
+{"id": "RA-SCI-013", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "تم вывод القمر الصناعي إلى مدار ارتفاعه 500 كيلومتر.", "issues": [], "seconds": 22.68}
+{"id": "RA-SCI-017", "model": "qwen3-14b-q5km", "mode": "professional", "prompt_version": "1.0.0", "output": "لضمان التكرار، تم نشر جميع البيانات الأولية والكود البرمجي في مستودع مفتوح.", "issues": [], "seconds": 27.49}

@@ -1,0 +1,29 @@
+{
+  "model": "qwen35-9b-q6k",
+  "pin": {
+    "repo": "AtomicChat/Qwen3.5-9B-GGUF",
+    "revision": "e9a969f97281651d1950bca29361cea72d6879a5",
+    "file": "qwen35-9b-Q6_K.gguf",
+    "size": 7359259712,
+    "sha256": "ecaa3ff73b3f818b64a3b34b21834286cf7b1fdbbcbcad8892ace4383bb5c1e9",
+    "base_model": "Qwen/Qwen3.5-9B@c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "license": "apache-2.0",
+    "quantizer_note": "third-party quantisation; repository states apache-2.0; provenance to be confirmed by Astra"
+  },
+  "shard": 3,
+  "shards": 4,
+  "cases": 100,
+  "ok": 100,
+  "download_s": 30.3,
+  "cold_start_s": 3.6,
+  "peak_rss_bytes": 7288598528,
+  "total_s": 820.2,
+  "ctx": 8192,
+  "prompt_version": "1.0.0",
+  "host": {
+    "platform": "Windows-2025Server-10.0.26100-SP0",
+    "cpu_physical": 2,
+    "cpu_logical": 4,
+    "ram": 17174360064
+  }
+}

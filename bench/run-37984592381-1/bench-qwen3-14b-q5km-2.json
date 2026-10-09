@@ -1,0 +1,29 @@
+{
+  "model": "qwen3-14b-q5km",
+  "pin": {
+    "repo": "Qwen/Qwen3-14B-GGUF",
+    "revision": "530227a7d994db8eca5ab5ced2fb692b614357fd",
+    "file": "Qwen3-14B-Q5_K_M.gguf",
+    "size": 10514569568,
+    "sha256": "e7c9aba1129ca2936be9eca01419d9f86af40e08caa01230d5574b34d08e3e31",
+    "base_model": "Qwen/Qwen3-14B",
+    "license": "apache-2.0",
+    "quantizer_note": "official Qwen GGUF"
+  },
+  "shard": 2,
+  "shards": 4,
+  "cases": 100,
+  "ok": 100,
+  "download_s": 136.1,
+  "cold_start_s": 5.2,
+  "peak_rss_bytes": 11550347264,
+  "total_s": 1468.8,
+  "ctx": 8192,
+  "prompt_version": "1.0.0",
+  "host": {
+    "platform": "Windows-2025Server-10.0.26100-SP0",
+    "cpu_physical": 2,
+    "cpu_logical": 4,
+    "ram": 17174360064
+  }
+}
