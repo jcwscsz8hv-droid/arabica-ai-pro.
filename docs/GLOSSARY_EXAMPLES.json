@@ -1,0 +1,1085 @@
+{
+  "format": "arabica-glossary",
+  "version": 1,
+  "_comment": "ПРИМЕРЫ терминов в формате импорта Arabica. Все записи — предложения Claude со статусом draft. Не являются словарной нормой до сверки экспертом с источником из поля sources[].locator. Лицензия: CC0.",
+  "terms": [
+    {
+      "lang": "ru",
+      "source": "Совет Безопасности ООН",
+      "domain": "diplomatic",
+      "preferred": "مجلس الأمن التابع للأمم المتحدة",
+      "acceptable": [
+        "مجلس الأمن الدولي",
+        "مجلس الأمن"
+      ],
+      "forbidden": [
+        "مجلس السلامة"
+      ],
+      "notes": {
+        "مجلس السلامة": "калька, ошибка"
+      },
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [
+        {
+          "source": "Совет Безопасности ООН провёл заседание.",
+          "target": "عقد مجلس الأمن التابع للأمم المتحدة جلسة."
+        }
+      ],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "Генеральная Ассамблея ООН",
+      "domain": "diplomatic",
+      "preferred": "الجمعية العامة للأمم المتحدة",
+      "acceptable": [],
+      "forbidden": [
+        "المجلس العام"
+      ],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "Генеральный секретарь ООН",
+      "domain": "diplomatic",
+      "preferred": "الأمين العام للأمم المتحدة",
+      "acceptable": [],
+      "forbidden": [
+        "السكرتير العام"
+      ],
+      "notes": {
+        "السكرتير العام": "разговорная калька; в документах ООН — الأمين العام"
+      },
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "Лига арабских государств",
+      "domain": "diplomatic",
+      "preferred": "جامعة الدول العربية",
+      "acceptable": [],
+      "forbidden": [
+        "رابطة الدول العربية"
+      ],
+      "notes": {
+        "رابطة الدول العربية": "калька «лига»"
+      },
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: Устав ЛАГ (арабский текст)"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "верительные грамоты",
+      "domain": "diplomatic",
+      "preferred": "أوراق الاعتماد",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "мн.ч.; глагол: قدّم أوراق اعتماده",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [
+        {
+          "source": "Посол вручил верительные грамоты.",
+          "target": "قدّم السفير أوراق اعتماده."
+        }
+      ],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "меморандум о взаимопонимании",
+      "domain": "diplomatic",
+      "preferred": "مذكرة تفاهم",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "переговоры",
+      "domain": "diplomatic",
+      "preferred": "مفاوضات",
+      "acceptable": [
+        "محادثات"
+      ],
+      "forbidden": [],
+      "notes": {
+        "محادثات": "«беседы/переговоры» менее формально"
+      },
+      "pos": "noun",
+      "grammar_note": "ед.ч. مفاوضة почти не употребляется",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "прекращение огня",
+      "domain": "military",
+      "preferred": "وقف إطلاق النار",
+      "acceptable": [],
+      "forbidden": [
+        "إيقاف النار"
+      ],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "перемирие",
+      "domain": "military",
+      "preferred": "هدنة",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "noun",
+      "grammar_note": "мн.ч. هدن",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "суверенитет",
+      "domain": "political",
+      "preferred": "سيادة",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "noun",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "территориальная целостность",
+      "domain": "political",
+      "preferred": "وحدة الأراضي",
+      "acceptable": [
+        "سلامة الأراضي"
+      ],
+      "forbidden": [],
+      "notes": {
+        "سلامة الأراضي": "также употребляется в текстах ООН"
+      },
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "невмешательство во внутренние дела",
+      "domain": "political",
+      "preferred": "عدم التدخل في الشؤون الداخلية",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "санкции",
+      "domain": "political",
+      "preferred": "عقوبات",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "noun",
+      "grammar_note": "мн.ч.; ед. عقوبة",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "чрезвычайное положение",
+      "domain": "legal",
+      "preferred": "حالة الطوارئ",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "законопроект",
+      "domain": "legal",
+      "preferred": "مشروع قانون",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "noun",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "Конституционный суд",
+      "domain": "legal",
+      "preferred": "المحكمة الدستورية",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "вступить в силу",
+      "domain": "legal",
+      "preferred": "دخل حيز التنفيذ",
+      "acceptable": [
+        "دخل حيز النفاذ"
+      ],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "ратифицировать",
+      "domain": "legal",
+      "preferred": "صادق على",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "verb",
+      "grammar_note": "صادق يصادق مصادقة على",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "министр иностранных дел",
+      "domain": "political",
+      "preferred": "وزير الخارجية",
+      "acceptable": [],
+      "forbidden": [
+        "وزير الشؤون الأجنبية"
+      ],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "министерство обороны",
+      "domain": "military",
+      "preferred": "وزارة الدفاع",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "генеральный штаб",
+      "domain": "military",
+      "preferred": "هيئة الأركان العامة",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "противовоздушная оборона",
+      "domain": "military",
+      "preferred": "الدفاع الجوي",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "аббр. ПВО",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "беспилотный летательный аппарат",
+      "domain": "military",
+      "preferred": "طائرة مسيّرة",
+      "acceptable": [
+        "طائرة بدون طيار"
+      ],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "аббр. БПЛА",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "баллистическая ракета",
+      "domain": "military",
+      "preferred": "صاروخ باليستي",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "военные учения",
+      "domain": "military",
+      "preferred": "مناورات عسكرية",
+      "acceptable": [
+        "تدريبات عسكرية"
+      ],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "миротворческие силы",
+      "domain": "military",
+      "preferred": "قوات حفظ السلام",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "линия соприкосновения",
+      "domain": "military",
+      "preferred": "خط التماس",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "нераспространение ядерного оружия",
+      "domain": "military",
+      "preferred": "عدم انتشار الأسلحة النووية",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: ДНЯО, арабский текст"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "искусственный интеллект",
+      "domain": "science",
+      "preferred": "الذكاء الاصطناعي",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: словари АН/ALECSO"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "машинное обучение",
+      "domain": "science",
+      "preferred": "التعلم الآلي",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: словари ALECSO"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "гипотеза",
+      "domain": "science",
+      "preferred": "فرضية",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "noun",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "клинические испытания",
+      "domain": "science",
+      "preferred": "التجارب السريرية",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "возобновляемая энергетика",
+      "domain": "science",
+      "preferred": "الطاقة المتجددة",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "валовой внутренний продукт",
+      "domain": "economic",
+      "preferred": "الناتج المحلي الإجمالي",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "аббр. ВВП",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "инфляция",
+      "domain": "economic",
+      "preferred": "التضخم",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "noun",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ru",
+      "source": "государственный бюджет",
+      "domain": "economic",
+      "preferred": "الموازنة العامة للدولة",
+      "acceptable": [
+        "الميزانية العامة"
+      ],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ar",
+      "source": "مجلس التعاون لدول الخليج العربية",
+      "domain": "diplomatic",
+      "preferred": "Совет сотрудничества арабских государств Персидского залива",
+      "acceptable": [
+        "Совет сотрудничества стран Залива"
+      ],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: официальный сайт ССАГПЗ; МИД РФ"
+        }
+      ]
+    },
+    {
+      "lang": "ar",
+      "source": "مجلس الشورى",
+      "domain": "political",
+      "preferred": "Консультативный совет",
+      "acceptable": [
+        "Совет шуры"
+      ],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ar",
+      "source": "ولي العهد",
+      "domain": "political",
+      "preferred": "наследный принц",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ar",
+      "source": "القائم بالأعمال",
+      "domain": "diplomatic",
+      "preferred": "временный поверенный в делах",
+      "acceptable": [],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    },
+    {
+      "lang": "ar",
+      "source": "مبعوث أممي",
+      "domain": "diplomatic",
+      "preferred": "специальный посланник ООН",
+      "acceptable": [
+        "посланник ООН"
+      ],
+      "forbidden": [],
+      "notes": {},
+      "pos": "phrase",
+      "grammar_note": "",
+      "priority": 60,
+      "status": "draft",
+      "origin": "builtin",
+      "bidirectional": 1,
+      "examples": [],
+      "sources": [
+        {
+          "code": "CLAUDE-2026-10",
+          "title": "Предложение Claude (не сверено с источником)",
+          "kind": "proposal",
+          "note": "Требует сверки экспертом с указанным в verify_against источником; до сверки status=draft",
+          "locator": "verify_against: UNTERM; официальные арабские тексты документов ООН"
+        }
+      ]
+    }
+  ]
+}
