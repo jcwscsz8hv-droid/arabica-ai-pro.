@@ -48,6 +48,7 @@ class EngineConfig:
     stall_timeout_s: int = 180
     request_timeout_s: int = 3600
     extra_args: tuple[str, ...] = field(default_factory=tuple)
+    launcher: tuple[str, ...] = field(default_factory=tuple)  # tests only: e.g. (sys.executable,)
 
 
 def check_files(config: EngineConfig) -> None:
@@ -191,7 +192,7 @@ class LlamaServerEngine:
             self.port = _free_port()
             self.key = secrets.token_urlsafe(24)
             threads = self.config.threads or physical_cores()
-            args = [str(self.config.binary), "-m", str(self.config.model),
+            args = [*self.config.launcher, str(self.config.binary.resolve()), "-m", str(self.config.model.resolve()),
                     "--host", LOOPBACK, "--port", str(self.port), "--api-key", self.key,
                     "-c", str(self.config.context_tokens), "-t", str(threads), "-np", "1",
                     "--jinja", *self.config.extra_args]

@@ -12,8 +12,8 @@ from arabica.quality import check_translation
 
 class FakeEngine:
     def __init__(self, result='هذه ترجمة.'): self.result = result; self.prompts = []
-    def generate(self, prompt, cancel=None):
-        self.prompts.append(prompt)
+    def chat(self, messages, cancel=None, **kw):
+        self.prompts.append(messages)
         return self.result
 
 
