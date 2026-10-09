@@ -1,0 +1,3 @@
+release: v0.6.0 assets: 1
+   nightly-tag.txt
+ERROR: no asset matches bin-win-cpu-x64\.zip$
